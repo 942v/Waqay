@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05B44D29C2479AA9120593C8 /* Pods_WaqayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD109D493D36E18EFF4E772 /* Pods_WaqayTests.framework */; };
+		21855959226BD16D9C55371A /* Pods_Waqay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F11F50010CEE26478213279 /* Pods_Waqay.framework */; };
 		278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011AD245F7A3000E2A442 /* AppDelegate.swift */; };
-		278011B0245F7A3000E2A442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011AF245F7A3000E2A442 /* SceneDelegate.swift */; };
 		278011B2245F7A3000E2A442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011B1245F7A3000E2A442 /* ViewController.swift */; };
 		278011B5245F7A3000E2A442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278011B3245F7A3000E2A442 /* Main.storyboard */; };
 		278011B8245F7A3000E2A442 /* Waqay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 278011B6245F7A3000E2A442 /* Waqay.xcdatamodeld */; };
@@ -28,9 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A13D93016624BA86171A6FD /* Pods-Waqay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waqay.debug.xcconfig"; path = "Target Support Files/Pods-Waqay/Pods-Waqay.debug.xcconfig"; sourceTree = "<group>"; };
+		13AF21C8188D6CBDA1E9EA6F /* Pods-WaqayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaqayTests.debug.xcconfig"; path = "Target Support Files/Pods-WaqayTests/Pods-WaqayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		278011AA245F7A3000E2A442 /* Waqay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waqay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278011AD245F7A3000E2A442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		278011AF245F7A3000E2A442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		278011B1245F7A3000E2A442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		278011B4245F7A3000E2A442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		278011B7245F7A3000E2A442 /* Waqay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Waqay.xcdatamodel; sourceTree = "<group>"; };
@@ -40,6 +42,11 @@
 		278011C3245F7A3200E2A442 /* WaqayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaqayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		278011C7245F7A3200E2A442 /* WaqayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaqayTests.swift; sourceTree = "<group>"; };
 		278011C9245F7A3200E2A442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278011D3245F7CD200E2A442 /* Waqay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waqay.entitlements; sourceTree = "<group>"; };
+		3AD109D493D36E18EFF4E772 /* Pods_WaqayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaqayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F11F50010CEE26478213279 /* Pods_Waqay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waqay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B738E10DF40D83802642A12 /* Pods-Waqay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waqay.release.xcconfig"; path = "Target Support Files/Pods-Waqay/Pods-Waqay.release.xcconfig"; sourceTree = "<group>"; };
+		9C384F044CF1DD61E7551521 /* Pods-WaqayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaqayTests.release.xcconfig"; path = "Target Support Files/Pods-WaqayTests/Pods-WaqayTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21855959226BD16D9C55371A /* Pods_Waqay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B44D29C2479AA9120593C8 /* Pods_WaqayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,8 @@
 				278011AC245F7A3000E2A442 /* Waqay */,
 				278011C6245F7A3200E2A442 /* WaqayTests */,
 				278011AB245F7A3000E2A442 /* Products */,
+				E524C9574189F3E332C56E54 /* Pods */,
+				71E6A06306231A130EFF975B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +92,11 @@
 		278011AC245F7A3000E2A442 /* Waqay */ = {
 			isa = PBXGroup;
 			children = (
+				278011D3245F7CD200E2A442 /* Waqay.entitlements */,
+				278011B9245F7A3100E2A442 /* Assets.xcassets */,
 				278011AD245F7A3000E2A442 /* AppDelegate.swift */,
-				278011AF245F7A3000E2A442 /* SceneDelegate.swift */,
 				278011B1245F7A3000E2A442 /* ViewController.swift */,
 				278011B3245F7A3000E2A442 /* Main.storyboard */,
-				278011B9245F7A3100E2A442 /* Assets.xcassets */,
 				278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */,
 				278011BE245F7A3100E2A442 /* Info.plist */,
 				278011B6245F7A3000E2A442 /* Waqay.xcdatamodeld */,
@@ -102,6 +113,26 @@
 			path = WaqayTests;
 			sourceTree = "<group>";
 		};
+		71E6A06306231A130EFF975B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F11F50010CEE26478213279 /* Pods_Waqay.framework */,
+				3AD109D493D36E18EFF4E772 /* Pods_WaqayTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E524C9574189F3E332C56E54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A13D93016624BA86171A6FD /* Pods-Waqay.debug.xcconfig */,
+				6B738E10DF40D83802642A12 /* Pods-Waqay.release.xcconfig */,
+				13AF21C8188D6CBDA1E9EA6F /* Pods-WaqayTests.debug.xcconfig */,
+				9C384F044CF1DD61E7551521 /* Pods-WaqayTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 278011CC245F7A3200E2A442 /* Build configuration list for PBXNativeTarget "Waqay" */;
 			buildPhases = (
+				6DFEE4B77A2DEB554CA71311 /* [CP] Check Pods Manifest.lock */,
 				278011A6245F7A3000E2A442 /* Sources */,
 				278011A7245F7A3000E2A442 /* Frameworks */,
 				278011A8245F7A3000E2A442 /* Resources */,
@@ -126,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 278011CF245F7A3200E2A442 /* Build configuration list for PBXNativeTarget "WaqayTests" */;
 			buildPhases = (
+				6C688E127AB7A3093515E001 /* [CP] Check Pods Manifest.lock */,
 				278011BF245F7A3200E2A442 /* Sources */,
 				278011C0245F7A3200E2A442 /* Frameworks */,
 				278011C1245F7A3200E2A442 /* Resources */,
@@ -198,6 +231,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C688E127AB7A3093515E001 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaqayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DFEE4B77A2DEB554CA71311 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Waqay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		278011A6245F7A3000E2A442 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -206,7 +286,6 @@
 				278011B2245F7A3000E2A442 /* ViewController.swift in Sources */,
 				278011B8245F7A3000E2A442 /* Waqay.xcdatamodeld in Sources */,
 				278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */,
-				278011B0245F7A3000E2A442 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -352,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -364,15 +443,19 @@
 		};
 		278011CD245F7A3200E2A442 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A13D93016624BA86171A6FD /* Pods-Waqay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Waqay/Waqay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.0.1;
 				DEVELOPMENT_TEAM = AU3J78BE58;
 				INFOPLIST_FILE = Waqay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -382,15 +465,19 @@
 		};
 		278011CE245F7A3200E2A442 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B738E10DF40D83802642A12 /* Pods-Waqay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Waqay/Waqay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.0.1;
 				DEVELOPMENT_TEAM = AU3J78BE58;
 				INFOPLIST_FILE = Waqay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -400,6 +487,7 @@
 		};
 		278011D0245F7A3200E2A442 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13AF21C8188D6CBDA1E9EA6F /* Pods-WaqayTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -422,6 +510,7 @@
 		};
 		278011D1245F7A3200E2A442 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C384F044CF1DD61E7551521 /* Pods-WaqayTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
