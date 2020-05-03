@@ -11,6 +11,7 @@ build/
 *.perspectivev3
 !default.perspectivev3
 *.xcodeproj/xcuserdata/
+*.xcworkspace/
 *.xcworkspace/xcuserdata/
 *.xcworkspace/xcshareddata/
 xcuserstate
