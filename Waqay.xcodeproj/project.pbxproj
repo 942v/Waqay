@@ -166,6 +166,7 @@
 				A46023102464E406006AA43C /* Responders */,
 				A460232D2464F044006AA43C /* Navigators */,
 				A460231C2464E529006AA43C /* View-ViewModels */,
+				A46023302464F7BD006AA43C /* Reusable */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -220,7 +221,6 @@
 				A460231D2464E534006AA43C /* Launch */,
 				A46023262464EAD7006AA43C /* Onboarding */,
 				A46023202464E5F5006AA43C /* AddRadios */,
-				A46023302464F7BD006AA43C /* Reusable */,
 			);
 			path = "View-ViewModels";
 			sourceTree = "<group>";
