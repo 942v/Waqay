@@ -8,17 +8,26 @@
 
 import RxSwift
 
+public typealias OnboardingNavigationAction = NavigationAction<OnboardingView>
+
 public class OnboardingViewModel {
-    
-    public var view: Observable<OnboardingView> {
-        return viewSubject.asObservable()
+
+    public var navigationAction: Observable<OnboardingNavigationAction> {
+      return _navigationAction.asObservable()
     }
-    private let viewSubject = BehaviorSubject<OnboardingView>(value: .welcome)
+    private let _navigationAction = BehaviorSubject<OnboardingNavigationAction>(value: .present(view: .welcome))
+}
+
+// MARK: - Actions
+extension OnboardingViewModel {
+    public func uiPresented(onboardingView: OnboardingView) {
+      _navigationAction.onNext(.presented(view: onboardingView))
+    }
 }
 
 // MARK: - GoToAddRadiosNavigator
 extension OnboardingViewModel: GoToAddRadiosNavigator {
     public func navigateToAddRadios() {
-        
+        _navigationAction.onNext(.present(view: .addRadios))
     }
 }

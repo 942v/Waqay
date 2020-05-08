@@ -29,6 +29,7 @@
 		A46023282464EAF4006AA43C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023272464EAF4006AA43C /* OnboardingViewModel.swift */; };
 		A460232A2464EBCD006AA43C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023292464EBCD006AA43C /* MainView.swift */; };
 		A460232F2464F1E0006AA43C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460232E2464F1E0006AA43C /* OnboardingView.swift */; };
+		A46023322464F7DE006AA43C /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023312464F7DE006AA43C /* NavigationAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		A46023272464EAF4006AA43C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		A46023292464EBCD006AA43C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A460232E2464F1E0006AA43C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A46023312464F7DE006AA43C /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				A460231D2464E534006AA43C /* Launch */,
 				A46023262464EAD7006AA43C /* Onboarding */,
 				A46023202464E5F5006AA43C /* AddRadios */,
+				A46023302464F7BD006AA43C /* Reusable */,
 			);
 			path = "View-ViewModels";
 			sourceTree = "<group>";
@@ -263,6 +266,14 @@
 				A46023172464E4D1006AA43C /* GoToPlayerNavigator.swift */,
 			);
 			path = Navigators;
+			sourceTree = "<group>";
+		};
+		A46023302464F7BD006AA43C /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				A46023312464F7DE006AA43C /* NavigationAction.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 		E524C9574189F3E332C56E54 /* Pods */ = {
@@ -441,6 +452,7 @@
 				278011B8245F7A3000E2A442 /* Waqay.xcdatamodeld in Sources */,
 				A460232F2464F1E0006AA43C /* OnboardingView.swift in Sources */,
 				A460232A2464EBCD006AA43C /* MainView.swift in Sources */,
+				A46023322464F7DE006AA43C /* NavigationAction.swift in Sources */,
 				278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
