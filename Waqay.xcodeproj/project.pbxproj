@@ -28,7 +28,7 @@
 		A46023252464EA4B006AA43C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023242464EA4B006AA43C /* WelcomeViewModel.swift */; };
 		A46023282464EAF4006AA43C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023272464EAF4006AA43C /* OnboardingViewModel.swift */; };
 		A460232A2464EBCD006AA43C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023292464EBCD006AA43C /* MainView.swift */; };
-		A460232C2464ED64006AA43C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460232B2464ED64006AA43C /* OnboardingView.swift */; };
+		A460232F2464F1E0006AA43C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460232E2464F1E0006AA43C /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 		A46023242464EA4B006AA43C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		A46023272464EAF4006AA43C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		A46023292464EBCD006AA43C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		A460232B2464ED64006AA43C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A460232E2464F1E0006AA43C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				A46023272464EAF4006AA43C /* OnboardingViewModel.swift */,
-				A460232B2464ED64006AA43C /* OnboardingView.swift */,
+				A460232E2464F1E0006AA43C /* OnboardingView.swift */,
 				A46023232464EA34006AA43C /* Welcome */,
 			);
 			path = Onboarding;
@@ -439,7 +439,7 @@
 				A460231F2464E55B006AA43C /* LaunchViewModel.swift in Sources */,
 				A460230D2464E3A1006AA43C /* RadiosDataRepository.swift in Sources */,
 				278011B8245F7A3000E2A442 /* Waqay.xcdatamodeld in Sources */,
-				A460232C2464ED64006AA43C /* OnboardingView.swift in Sources */,
+				A460232F2464F1E0006AA43C /* OnboardingView.swift in Sources */,
 				A460232A2464EBCD006AA43C /* MainView.swift in Sources */,
 				278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */,
 			);
