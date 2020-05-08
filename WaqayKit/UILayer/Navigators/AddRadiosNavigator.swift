@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol AddRadiosResponder: AnyObject {
+public protocol AddRadiosNavigator: AnyObject {
     
 }

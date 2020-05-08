@@ -17,6 +17,6 @@ public class OnboardingViewModel {
 }
 
 // MARK: - AddRadiosResponder
-extension OnboardingViewModel: AddRadiosResponder {
+extension OnboardingViewModel: AddRadiosNavigator {
     
 }
