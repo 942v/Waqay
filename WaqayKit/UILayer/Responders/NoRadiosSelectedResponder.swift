@@ -10,4 +10,5 @@ import Foundation
 
 public protocol NoRadiosSelectedResponder: AnyObject {
     
+    func noRadiosSelected()
 }

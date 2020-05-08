@@ -18,17 +18,21 @@ public class MainViewModel {
 
 // MARK: - NoRadiosSelectedResponder
 extension MainViewModel: NoRadiosSelectedResponder {
-    
+    public func noRadiosSelected() {
+        viewSubject.onNext(.onboarding)
+    }
 }
 
 // MARK: - HasRadiosSelectedResponder
 extension MainViewModel: HasRadiosSelectedResponder {
-    
+    public func hasRadiosSelected() {
+        viewSubject.onNext(.player)
+    }
 }
 
 // MARK: - GoToPlayerNavigator
 extension MainViewModel: GoToPlayerNavigator {
     public func navigateToPlayer() {
-        
+        viewSubject.onNext(.player)
     }
 }
