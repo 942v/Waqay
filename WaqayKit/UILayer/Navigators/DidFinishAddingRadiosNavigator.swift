@@ -10,4 +10,5 @@ import Foundation
 
 public protocol DidFinishAddingRadiosNavigator: AnyObject {
     
+    func navigateToPlayer()
 }
