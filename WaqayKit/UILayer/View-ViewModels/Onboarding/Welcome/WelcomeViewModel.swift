@@ -21,6 +21,6 @@ public class WelcomeViewModel {
 extension WelcomeViewModel {
     
     @objc public func showAddRadios() {
-        
+        goToAddRadiosNavigator.navigateToAddRadios()
     }
 }

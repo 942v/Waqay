@@ -16,7 +16,9 @@ public class OnboardingViewModel {
     private let viewSubject = BehaviorSubject<OnboardingView>(value: .welcome)
 }
 
-// MARK: - AddRadiosResponder
-extension OnboardingViewModel: AddRadiosNavigator {
-    
+// MARK: - GoToAddRadiosNavigator
+extension OnboardingViewModel: GoToAddRadiosNavigator {
+    public func navigateToAddRadios() {
+        
+    }
 }
