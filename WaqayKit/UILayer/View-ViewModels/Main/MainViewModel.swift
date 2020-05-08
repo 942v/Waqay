@@ -27,6 +27,6 @@ extension MainViewModel: HasRadiosSelectedResponder {
 }
 
 // MARK: - HasRadiosSelectedResponder
-extension MainViewModel: DidFinishAddingRadiosResponder {
+extension MainViewModel: DidFinishAddingRadiosNavigator {
     
 }

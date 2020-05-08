@@ -11,12 +11,12 @@ import Foundation
 public class AddRadiosViewModel {
     
     private unowned let radiosDataRepository: RadiosDataRepository
-    private unowned let didFinishAddingRadiosResponder: DidFinishAddingRadiosResponder
+    private unowned let didFinishAddingRadiosNavigator: DidFinishAddingRadiosNavigator
     
     init(radiosDataRepository: RadiosDataRepository,
-         didFinishAddingRadiosResponder: DidFinishAddingRadiosResponder) {
+         didFinishAddingRadiosNavigator: DidFinishAddingRadiosNavigator) {
         self.radiosDataRepository = radiosDataRepository
-        self.didFinishAddingRadiosResponder = didFinishAddingRadiosResponder
+        self.didFinishAddingRadiosNavigator = didFinishAddingRadiosNavigator
     }
 }
 
