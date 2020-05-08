@@ -10,10 +10,10 @@ import Foundation
 
 public class WelcomeViewModel {
     
-    private unowned let addRadiosNavigator: AddRadiosNavigator
+    private unowned let goToAddRadiosNavigator: GoToAddRadiosNavigator
     
-    init(addRadiosNavigator: AddRadiosNavigator) {
-        self.addRadiosNavigator = addRadiosNavigator
+    init(goToAddRadiosNavigator: GoToAddRadiosNavigator) {
+        self.goToAddRadiosNavigator = goToAddRadiosNavigator
     }
 }
 

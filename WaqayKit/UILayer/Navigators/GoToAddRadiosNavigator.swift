@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol AddRadiosNavigator: AnyObject {
+public protocol GoToAddRadiosNavigator: AnyObject {
     
     func navigateToAddRadios()
 }
