@@ -21,7 +21,7 @@
 		A46023122464E44B006AA43C /* NoRadiosSelectedResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023112464E44B006AA43C /* NoRadiosSelectedResponder.swift */; };
 		A46023142464E458006AA43C /* HasRadiosSelectedResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023132464E458006AA43C /* HasRadiosSelectedResponder.swift */; };
 		A46023162464E4A4006AA43C /* GoToAddRadiosNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023152464E4A4006AA43C /* GoToAddRadiosNavigator.swift */; };
-		A46023182464E4D1006AA43C /* DidFinishAddingRadiosNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023172464E4D1006AA43C /* DidFinishAddingRadiosNavigator.swift */; };
+		A46023182464E4D1006AA43C /* GoToPlayerNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023172464E4D1006AA43C /* GoToPlayerNavigator.swift */; };
 		A460231B2464E525006AA43C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460231A2464E525006AA43C /* MainViewModel.swift */; };
 		A460231F2464E55B006AA43C /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460231E2464E55B006AA43C /* LaunchViewModel.swift */; };
 		A46023222464E61D006AA43C /* AddRadiosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023212464E61D006AA43C /* AddRadiosViewModel.swift */; };
@@ -65,7 +65,7 @@
 		A46023112464E44B006AA43C /* NoRadiosSelectedResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRadiosSelectedResponder.swift; sourceTree = "<group>"; };
 		A46023132464E458006AA43C /* HasRadiosSelectedResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasRadiosSelectedResponder.swift; sourceTree = "<group>"; };
 		A46023152464E4A4006AA43C /* GoToAddRadiosNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToAddRadiosNavigator.swift; sourceTree = "<group>"; };
-		A46023172464E4D1006AA43C /* DidFinishAddingRadiosNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidFinishAddingRadiosNavigator.swift; sourceTree = "<group>"; };
+		A46023172464E4D1006AA43C /* GoToPlayerNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToPlayerNavigator.swift; sourceTree = "<group>"; };
 		A460231A2464E525006AA43C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A460231E2464E55B006AA43C /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		A46023212464E61D006AA43C /* AddRadiosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRadiosViewModel.swift; sourceTree = "<group>"; };
@@ -260,7 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				A46023152464E4A4006AA43C /* GoToAddRadiosNavigator.swift */,
-				A46023172464E4D1006AA43C /* DidFinishAddingRadiosNavigator.swift */,
+				A46023172464E4D1006AA43C /* GoToPlayerNavigator.swift */,
 			);
 			path = Navigators;
 			sourceTree = "<group>";
@@ -427,7 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A46023162464E4A4006AA43C /* GoToAddRadiosNavigator.swift in Sources */,
-				A46023182464E4D1006AA43C /* DidFinishAddingRadiosNavigator.swift in Sources */,
+				A46023182464E4D1006AA43C /* GoToPlayerNavigator.swift in Sources */,
 				A46023252464EA4B006AA43C /* WelcomeViewModel.swift in Sources */,
 				A46023142464E458006AA43C /* HasRadiosSelectedResponder.swift in Sources */,
 				A460230F2464E3AE006AA43C /* WaqayRadiosDataRepository.swift in Sources */,

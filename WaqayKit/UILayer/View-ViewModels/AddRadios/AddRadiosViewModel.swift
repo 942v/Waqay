@@ -11,12 +11,12 @@ import Foundation
 public class AddRadiosViewModel {
     
     private unowned let radiosDataRepository: RadiosDataRepository
-    private unowned let didFinishAddingRadiosNavigator: DidFinishAddingRadiosNavigator
+    private unowned let goToPlayerNavigator: GoToPlayerNavigator
     
     init(radiosDataRepository: RadiosDataRepository,
-         didFinishAddingRadiosNavigator: DidFinishAddingRadiosNavigator) {
+         goToPlayerNavigator: GoToPlayerNavigator) {
         self.radiosDataRepository = radiosDataRepository
-        self.didFinishAddingRadiosNavigator = didFinishAddingRadiosNavigator
+        self.goToPlayerNavigator = goToPlayerNavigator
     }
 }
 
@@ -24,6 +24,6 @@ public class AddRadiosViewModel {
 extension AddRadiosViewModel {
     
     @objc public func didFinishAddingRadios() {
-        
+        goToPlayerNavigator.navigateToPlayer()
     }
 }

@@ -26,7 +26,9 @@ extension MainViewModel: HasRadiosSelectedResponder {
     
 }
 
-// MARK: - HasRadiosSelectedResponder
-extension MainViewModel: DidFinishAddingRadiosNavigator {
-    
+// MARK: - GoToPlayerNavigator
+extension MainViewModel: GoToPlayerNavigator {
+    public func navigateToPlayer() {
+        
+    }
 }
