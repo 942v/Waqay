@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,25 +11,9 @@
 		21855959226BD16D9C55371A /* Pods_Waqay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F11F50010CEE26478213279 /* Pods_Waqay.framework */; };
 		278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011AD245F7A3000E2A442 /* AppDelegate.swift */; };
 		278011B2245F7A3000E2A442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011B1245F7A3000E2A442 /* ViewController.swift */; };
-		278011B5245F7A3000E2A442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278011B3245F7A3000E2A442 /* Main.storyboard */; };
-		278011B8245F7A3000E2A442 /* Waqay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 278011B6245F7A3000E2A442 /* Waqay.xcdatamodeld */; };
 		278011BA245F7A3100E2A442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278011B9245F7A3100E2A442 /* Assets.xcassets */; };
 		278011BD245F7A3100E2A442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */; };
 		278011C8245F7A3200E2A442 /* WaqayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011C7245F7A3200E2A442 /* WaqayTests.swift */; };
-		A460230D2464E3A1006AA43C /* RadiosDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460230C2464E3A1006AA43C /* RadiosDataRepository.swift */; };
-		A460230F2464E3AE006AA43C /* WaqayRadiosDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460230E2464E3AE006AA43C /* WaqayRadiosDataRepository.swift */; };
-		A46023122464E44B006AA43C /* NoRadiosSelectedResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023112464E44B006AA43C /* NoRadiosSelectedResponder.swift */; };
-		A46023142464E458006AA43C /* HasRadiosSelectedResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023132464E458006AA43C /* HasRadiosSelectedResponder.swift */; };
-		A46023162464E4A4006AA43C /* GoToAddRadiosNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023152464E4A4006AA43C /* GoToAddRadiosNavigator.swift */; };
-		A46023182464E4D1006AA43C /* GoToPlayerNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023172464E4D1006AA43C /* GoToPlayerNavigator.swift */; };
-		A460231B2464E525006AA43C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460231A2464E525006AA43C /* MainViewModel.swift */; };
-		A460231F2464E55B006AA43C /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460231E2464E55B006AA43C /* LaunchViewModel.swift */; };
-		A46023222464E61D006AA43C /* AddRadiosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023212464E61D006AA43C /* AddRadiosViewModel.swift */; };
-		A46023252464EA4B006AA43C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023242464EA4B006AA43C /* WelcomeViewModel.swift */; };
-		A46023282464EAF4006AA43C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023272464EAF4006AA43C /* OnboardingViewModel.swift */; };
-		A460232A2464EBCD006AA43C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023292464EBCD006AA43C /* MainView.swift */; };
-		A460232F2464F1E0006AA43C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460232E2464F1E0006AA43C /* OnboardingView.swift */; };
-		A46023322464F7DE006AA43C /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46023312464F7DE006AA43C /* NavigationAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +32,6 @@
 		278011AA245F7A3000E2A442 /* Waqay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waqay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278011AD245F7A3000E2A442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		278011B1245F7A3000E2A442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		278011B4245F7A3000E2A442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		278011B7245F7A3000E2A442 /* Waqay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Waqay.xcdatamodel; sourceTree = "<group>"; };
 		278011B9245F7A3100E2A442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		278011BC245F7A3100E2A442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		278011BE245F7A3100E2A442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,20 +43,6 @@
 		4F11F50010CEE26478213279 /* Pods_Waqay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waqay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B738E10DF40D83802642A12 /* Pods-Waqay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waqay.release.xcconfig"; path = "Target Support Files/Pods-Waqay/Pods-Waqay.release.xcconfig"; sourceTree = "<group>"; };
 		9C384F044CF1DD61E7551521 /* Pods-WaqayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaqayTests.release.xcconfig"; path = "Target Support Files/Pods-WaqayTests/Pods-WaqayTests.release.xcconfig"; sourceTree = "<group>"; };
-		A460230C2464E3A1006AA43C /* RadiosDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiosDataRepository.swift; sourceTree = "<group>"; };
-		A460230E2464E3AE006AA43C /* WaqayRadiosDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaqayRadiosDataRepository.swift; sourceTree = "<group>"; };
-		A46023112464E44B006AA43C /* NoRadiosSelectedResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRadiosSelectedResponder.swift; sourceTree = "<group>"; };
-		A46023132464E458006AA43C /* HasRadiosSelectedResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasRadiosSelectedResponder.swift; sourceTree = "<group>"; };
-		A46023152464E4A4006AA43C /* GoToAddRadiosNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToAddRadiosNavigator.swift; sourceTree = "<group>"; };
-		A46023172464E4D1006AA43C /* GoToPlayerNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToPlayerNavigator.swift; sourceTree = "<group>"; };
-		A460231A2464E525006AA43C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		A460231E2464E55B006AA43C /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
-		A46023212464E61D006AA43C /* AddRadiosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRadiosViewModel.swift; sourceTree = "<group>"; };
-		A46023242464EA4B006AA43C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
-		A46023272464EAF4006AA43C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		A46023292464EBCD006AA43C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		A460232E2464F1E0006AA43C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		A46023312464F7DE006AA43C /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				278011AC245F7A3000E2A442 /* Waqay */,
-				A46023062464E2B2006AA43C /* WaqayKit */,
 				278011C6245F7A3200E2A442 /* WaqayTests */,
 				278011AB245F7A3000E2A442 /* Products */,
 				E524C9574189F3E332C56E54 /* Pods */,
@@ -125,10 +92,8 @@
 				278011B9245F7A3100E2A442 /* Assets.xcassets */,
 				278011AD245F7A3000E2A442 /* AppDelegate.swift */,
 				278011B1245F7A3000E2A442 /* ViewController.swift */,
-				278011B3245F7A3000E2A442 /* Main.storyboard */,
 				278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */,
 				278011BE245F7A3100E2A442 /* Info.plist */,
-				278011B6245F7A3000E2A442 /* Waqay.xcdatamodeld */,
 			);
 			path = Waqay;
 			sourceTree = "<group>";
@@ -149,131 +114,6 @@
 				3AD109D493D36E18EFF4E772 /* Pods_WaqayTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A46023062464E2B2006AA43C /* WaqayKit */ = {
-			isa = PBXGroup;
-			children = (
-				A46023072464E2DA006AA43C /* UILayer */,
-				A46023082464E2EC006AA43C /* DataLayer */,
-			);
-			path = WaqayKit;
-			sourceTree = "<group>";
-		};
-		A46023072464E2DA006AA43C /* UILayer */ = {
-			isa = PBXGroup;
-			children = (
-				A46023102464E406006AA43C /* Responders */,
-				A460232D2464F044006AA43C /* Navigators */,
-				A460231C2464E529006AA43C /* View-ViewModels */,
-				A46023302464F7BD006AA43C /* Reusable */,
-			);
-			path = UILayer;
-			sourceTree = "<group>";
-		};
-		A46023082464E2EC006AA43C /* DataLayer */ = {
-			isa = PBXGroup;
-			children = (
-				A460230B2464E365006AA43C /* Repositories */,
-				A46023092464E33D006AA43C /* Model */,
-			);
-			path = DataLayer;
-			sourceTree = "<group>";
-		};
-		A46023092464E33D006AA43C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A460230B2464E365006AA43C /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				A460230C2464E3A1006AA43C /* RadiosDataRepository.swift */,
-				A460230E2464E3AE006AA43C /* WaqayRadiosDataRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		A46023102464E406006AA43C /* Responders */ = {
-			isa = PBXGroup;
-			children = (
-				A46023112464E44B006AA43C /* NoRadiosSelectedResponder.swift */,
-				A46023132464E458006AA43C /* HasRadiosSelectedResponder.swift */,
-			);
-			path = Responders;
-			sourceTree = "<group>";
-		};
-		A46023192464E50A006AA43C /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				A460231A2464E525006AA43C /* MainViewModel.swift */,
-				A46023292464EBCD006AA43C /* MainView.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		A460231C2464E529006AA43C /* View-ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				A46023192464E50A006AA43C /* Main */,
-				A460231D2464E534006AA43C /* Launch */,
-				A46023262464EAD7006AA43C /* Onboarding */,
-				A46023202464E5F5006AA43C /* AddRadios */,
-			);
-			path = "View-ViewModels";
-			sourceTree = "<group>";
-		};
-		A460231D2464E534006AA43C /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-				A460231E2464E55B006AA43C /* LaunchViewModel.swift */,
-			);
-			path = Launch;
-			sourceTree = "<group>";
-		};
-		A46023202464E5F5006AA43C /* AddRadios */ = {
-			isa = PBXGroup;
-			children = (
-				A46023212464E61D006AA43C /* AddRadiosViewModel.swift */,
-			);
-			path = AddRadios;
-			sourceTree = "<group>";
-		};
-		A46023232464EA34006AA43C /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				A46023242464EA4B006AA43C /* WelcomeViewModel.swift */,
-			);
-			path = Welcome;
-			sourceTree = "<group>";
-		};
-		A46023262464EAD7006AA43C /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				A46023272464EAF4006AA43C /* OnboardingViewModel.swift */,
-				A460232E2464F1E0006AA43C /* OnboardingView.swift */,
-				A46023232464EA34006AA43C /* Welcome */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		A460232D2464F044006AA43C /* Navigators */ = {
-			isa = PBXGroup;
-			children = (
-				A46023152464E4A4006AA43C /* GoToAddRadiosNavigator.swift */,
-				A46023172464E4D1006AA43C /* GoToPlayerNavigator.swift */,
-			);
-			path = Navigators;
-			sourceTree = "<group>";
-		};
-		A46023302464F7BD006AA43C /* Reusable */ = {
-			isa = PBXGroup;
-			children = (
-				A46023312464F7DE006AA43C /* NavigationAction.swift */,
-			);
-			path = Reusable;
 			sourceTree = "<group>";
 		};
 		E524C9574189F3E332C56E54 /* Pods */ = {
@@ -298,6 +138,7 @@
 				278011A6245F7A3000E2A442 /* Sources */,
 				278011A7245F7A3000E2A442 /* Frameworks */,
 				278011A8245F7A3000E2A442 /* Resources */,
+				A873E1B9D52912F4DFACD02B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,7 +213,6 @@
 			files = (
 				278011BD245F7A3100E2A442 /* LaunchScreen.storyboard in Resources */,
 				278011BA245F7A3100E2A442 /* Assets.xcassets in Resources */,
-				278011B5245F7A3000E2A442 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +270,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A873E1B9D52912F4DFACD02B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Waqay/Pods-Waqay-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Waqay/Pods-Waqay-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Waqay/Pods-Waqay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -437,22 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A46023162464E4A4006AA43C /* GoToAddRadiosNavigator.swift in Sources */,
-				A46023182464E4D1006AA43C /* GoToPlayerNavigator.swift in Sources */,
-				A46023252464EA4B006AA43C /* WelcomeViewModel.swift in Sources */,
-				A46023142464E458006AA43C /* HasRadiosSelectedResponder.swift in Sources */,
-				A460230F2464E3AE006AA43C /* WaqayRadiosDataRepository.swift in Sources */,
-				A46023282464EAF4006AA43C /* OnboardingViewModel.swift in Sources */,
 				278011B2245F7A3000E2A442 /* ViewController.swift in Sources */,
-				A460231B2464E525006AA43C /* MainViewModel.swift in Sources */,
-				A46023222464E61D006AA43C /* AddRadiosViewModel.swift in Sources */,
-				A46023122464E44B006AA43C /* NoRadiosSelectedResponder.swift in Sources */,
-				A460231F2464E55B006AA43C /* LaunchViewModel.swift in Sources */,
-				A460230D2464E3A1006AA43C /* RadiosDataRepository.swift in Sources */,
-				278011B8245F7A3000E2A442 /* Waqay.xcdatamodeld in Sources */,
-				A460232F2464F1E0006AA43C /* OnboardingView.swift in Sources */,
-				A460232A2464EBCD006AA43C /* MainView.swift in Sources */,
-				A46023322464F7DE006AA43C /* NavigationAction.swift in Sources */,
 				278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,14 +318,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		278011B3245F7A3000E2A442 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				278011B4245F7A3000E2A442 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -626,6 +460,7 @@
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG RADIOS_DATASTORE_FAKE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -730,19 +565,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		278011B6245F7A3000E2A442 /* Waqay.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				278011B7245F7A3000E2A442 /* Waqay.xcdatamodel */,
-			);
-			currentVersion = 278011B7245F7A3000E2A442 /* Waqay.xcdatamodel */;
-			path = Waqay.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 278011A2245F7A3000E2A442 /* Project object */;
 }

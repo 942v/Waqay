@@ -1,0 +1,6 @@
+use_frameworks!
+target 'WaqayKit_Tests' do
+  pod 'WaqayKit', :path => '../'
+  
+  
+end
