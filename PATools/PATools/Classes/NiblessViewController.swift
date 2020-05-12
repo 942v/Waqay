@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class NiblessViewController: UIViewController {
+open class NiblessViewController: UIViewController {
     
     public init() {
         super.init(nibName: nil, bundle: nil)

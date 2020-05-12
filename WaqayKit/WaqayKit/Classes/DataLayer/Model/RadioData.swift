@@ -7,31 +7,42 @@
 
 import Foundation
 
-public protocol RadioDataType {
+public struct RadioData {
     
-    var logo: URL { get }
-    var name: String { get }
-    var frequencies: [RadioFrequencyData] { get }
-    var knownStreamURL: URL { get }
-    var renewStreamURL: URL? { get }
-    var website: URL? { get }
-    var networks: [RadioNetworkData] { get }
+    let id: Int
+    let name: String
+    let streams: [RadioStreamData]
+    let website: URL?
+    let socialNetworks: RadioSocialNetworksData?
+    let frequencies: [RadioFrequencyData]?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case streams
+        case frequencies
+        case website = "web_url"
+        case socialNetworks = "social_networks"
+    }
 }
 
-public struct RadioData: RadioDataType {
+extension RadioData: Decodable {
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(Int.self, forKey: .id)
+        name = try values.decode(String.self, forKey: .name)
+        streams = try values.decode([RadioStreamData].self, forKey: .streams)
+        frequencies = try values.decodeIfPresent([RadioFrequencyData].self, forKey: .frequencies)
+        website = try RadioData.decodeURL(from: values, forKey: .website)
+        socialNetworks = try values.decodeIfPresent(RadioSocialNetworksData.self, forKey: .socialNetworks)
+    }
     
-    public let logo: URL
-    
-    public let name: String
-    
-    public let frequencies: [RadioFrequencyData]
-    
-    public let knownStreamURL: URL
-    
-    public let renewStreamURL: URL?
-    
-    public let website: URL?
-    
-    public let networks: [RadioNetworkData]
-    
+    private static func decodeURL(from values: KeyedDecodingContainer<CodingKeys>,
+                                  forKey: CodingKeys) throws -> URL? {
+        if let urlString = try values.decodeIfPresent(String.self, forKey: forKey) {
+            return URL(string: urlString)
+        }
+        
+        return nil
+    }
 }

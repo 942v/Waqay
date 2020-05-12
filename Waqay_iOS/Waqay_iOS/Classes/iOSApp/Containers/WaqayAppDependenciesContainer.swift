@@ -15,10 +15,11 @@ public class WaqayAppDependenciesContainer {
     public init() {
         
         func makeRadiosDataStore() -> RadiosDataStore {
-            #if DEBUG
-            return WaqayCoreDataRadiosDataStore()
-//            return WaqayFakeRadiosDataStore(hasSelectedRadios: false) // TODO: Fix this Implementation
-            #endif
+            func makeCoreDataStack() -> CoreDataStack {
+//                CoreDataStack(with: "WaqayData")
+                InMemoryCoreDataStack(with: "WaqayData")
+            }
+            return WaqayCoreDataRadiosDataStore(with: makeCoreDataStack())
         }
         
         func makeRadiosDataRemoteAPI() -> RadiosDataRemoteAPI {

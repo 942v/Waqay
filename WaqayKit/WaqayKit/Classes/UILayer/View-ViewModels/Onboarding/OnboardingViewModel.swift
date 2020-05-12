@@ -33,3 +33,10 @@ extension OnboardingViewModel: GoToAddRadiosNavigator {
         _navigationAction.onNext(.present(view: .addRadios))
     }
 }
+
+// MARK: - DidFinishAddingRadiosResponder
+extension OnboardingViewModel: DidFinishAddingRadiosResponder {
+    public func didFinishAddingRadios() {
+        _navigationAction.onNext(.present(view: .pushPermission))
+    }
+}

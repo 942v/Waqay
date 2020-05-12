@@ -33,8 +33,8 @@ extension MainViewModel: HasRadiosSelectedResponder {
 }
 
 // MARK: - GoToPlayerNavigator
-extension MainViewModel: GoToPlayerNavigator {
-    public func navigateToPlayer() {
+extension MainViewModel: DidFinishAddingRadiosResponder {
+    public func didFinishAddingRadios() {
         viewSubject.onNext(.player)
     }
 }

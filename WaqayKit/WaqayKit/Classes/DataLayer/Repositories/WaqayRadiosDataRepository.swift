@@ -8,6 +8,7 @@
 
 import Foundation
 import PromiseKit
+import CoreData
 
 public class WaqayRadiosDataRepository {
     
@@ -25,6 +26,14 @@ extension WaqayRadiosDataRepository: RadiosDataRepository {
     
     public func hasRadiosSelected() -> Promise<Bool> {
         radiosDataStore.readUser().then(hasRadiosSelected(user:))
+    }
+    
+    public func updateRadios() -> Promise<Bool> {
+        radiosDataRemoteAPI.getRadiosData().then(radiosDataStore.update(radiosData:))
+    }
+    
+    public func mainContext() -> NSManagedObjectContext {
+        radiosDataStore.mainContext()
     }
 }
 

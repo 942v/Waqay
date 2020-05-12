@@ -15,4 +15,5 @@ Pod::Spec.new do |s|
   s.frameworks = 'CoreData'
   s.dependency 'RxSwift'
   s.dependency 'PromiseKit'
+  s.dependency 'PATools'
 end

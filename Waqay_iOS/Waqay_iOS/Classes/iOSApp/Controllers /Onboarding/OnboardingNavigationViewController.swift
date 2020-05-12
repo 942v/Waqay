@@ -19,14 +19,19 @@ public class OnboardingNavigationViewController: UINavigationController {
     // ViewControllers
     private let welcomeViewController: WelcomeViewController
     
+    // Factories
+    private let makeAddRadiosViewController: () -> AddRadiosTableViewController
+    
     // Storage
     private let disposeBag = DisposeBag()
 
     // MARK: - Methods
     init(viewModel: OnboardingViewModel,
-        welcomeViewController: WelcomeViewController) {
+        welcomeViewController: WelcomeViewController,
+        makeAddRadiosViewController: @escaping () -> AddRadiosTableViewController) {
         self.viewModel = viewModel
         self.welcomeViewController = welcomeViewController
+        self.makeAddRadiosViewController = makeAddRadiosViewController
         
         super.init(nibName: nil, bundle: nil)
         self.delegate = self
@@ -34,6 +39,20 @@ public class OnboardingNavigationViewController: UINavigationController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        observeViewModel()
+    }
+}
+
+extension OnboardingNavigationViewController {
+    
+    private func observeViewModel() {
+        let observable = viewModel.navigationAction.distinctUntilChanged()
+      subscribe(to: observable)
     }
     
     func subscribe(to observable: Observable<OnboardingNavigationAction>) {
@@ -51,14 +70,18 @@ public class OnboardingNavigationViewController: UINavigationController {
             break
         }
     }
+}
+
+extension OnboardingNavigationViewController {
     
     func present(_ view: OnboardingView) {
         switch view {
         case .welcome:
             presentWelcomeViewController()
         case .addRadios:
-            // present player
-            print("Should show addRadios")
+            presentAddRadiosViewController()
+        case .pushPermission:
+            print("Should show pushPermission")
         }
     }
     
@@ -66,15 +89,10 @@ public class OnboardingNavigationViewController: UINavigationController {
         pushViewController(welcomeViewController, animated: false)
     }
     
-    public override func viewDidLoad() {
-        super.viewDidLoad()
+    func presentAddRadiosViewController() {
+        let addRadiosTableViewControllerToPresent = makeAddRadiosViewController()
         
-        observeViewModel()
-    }
-
-    private func observeViewModel() {
-        let observable = viewModel.navigationAction.distinctUntilChanged()
-      subscribe(to: observable)
+        pushViewController(addRadiosTableViewControllerToPresent, animated: true)
     }
 }
 
@@ -122,8 +140,10 @@ private extension OnboardingNavigationViewController {
       switch viewController {
       case is WelcomeViewController:
         return .welcome
-//      case is Add:
-//        return .addRadios
+      case is AddRadiosTableViewController:
+        return .addRadios
+//      case is Push:
+//        return .pushPermission
       default:
         assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
         return nil

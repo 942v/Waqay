@@ -10,6 +10,7 @@ import UIKit
 public enum Storyboard: String {
     case launchStoryboard = "Launch"
     case welcomeStoryboard = "Welcome"
+    case addRadiosStoryboard = "AddRadios"
 }
 
 public extension UIViewController {

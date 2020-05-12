@@ -8,8 +8,11 @@
 
 import Foundation
 import PromiseKit
+import CoreData
 
 public protocol RadiosDataRepository: AnyObject {
     
     func hasRadiosSelected() -> Promise<Bool>
+    func updateRadios() -> Promise<Bool>
+    func mainContext() -> NSManagedObjectContext
 }

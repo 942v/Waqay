@@ -9,6 +9,7 @@
 import UIKit
 import WaqayKit
 import RxSwift
+import PATools
 
 public typealias OnboardingNavigationViewControllerFactory = () ->  OnboardingNavigationViewController
 

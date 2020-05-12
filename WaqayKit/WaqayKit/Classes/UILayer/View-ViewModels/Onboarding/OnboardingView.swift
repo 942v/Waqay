@@ -11,10 +11,13 @@ import Foundation
 public enum OnboardingView {
     case welcome
     case addRadios
+    case pushPermission
     
     public func shouldHideNavigationBar() -> Bool {
         switch self {
         case .welcome:
+            return true
+        case .pushPermission:
             return true
         default:
             return false

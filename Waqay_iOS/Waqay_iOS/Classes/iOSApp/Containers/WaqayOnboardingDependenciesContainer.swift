@@ -29,8 +29,13 @@ extension WaqayOnboardingDependenciesContainer {
         let viewModel = sharedOnboardingViewModel
         let welcomeViewController = makeWelcomeViewController()
         
+        let addRadiosViewControllerFactory = {
+            return self.makeAddRadiosViewController()
+        }
+        
         return OnboardingNavigationViewController(viewModel: viewModel,
-                                                  welcomeViewController: welcomeViewController)
+                                                  welcomeViewController: welcomeViewController,
+                                                  makeAddRadiosViewController: addRadiosViewControllerFactory)
     }
 }
 
@@ -49,5 +54,24 @@ extension WaqayOnboardingDependenciesContainer: WelcomeViewModelFactory {
         welcomeViewController.inject(welcomeViewModelFactory: self)
         
         return welcomeViewController
+    }
+}
+
+extension WaqayOnboardingDependenciesContainer: AddRadiosViewModelFactory {
+    public func makeAddRadiosViewModelFactory() -> AddRadiosViewModel {
+        let radiosDataRepository = sharedRadiosDataRepository
+        let onboardingViewModel = sharedOnboardingViewModel
+        
+        return AddRadiosViewModel(radiosDataRepository: radiosDataRepository,
+                                  didFinishAddingRadiosResponder: onboardingViewModel)
+    }
+    
+    func makeAddRadiosViewController() -> AddRadiosTableViewController {
+        
+        let addRadiosTableViewController = AddRadiosTableViewController.instantiate(from: .addRadiosStoryboard, framework: "Waqay_iOS")
+        
+        addRadiosTableViewController.inject(viewModelFactory: self)
+        
+        return addRadiosTableViewController
     }
 }

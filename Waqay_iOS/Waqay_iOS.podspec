@@ -25,4 +25,5 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'RxCocoa'
   s.dependency 'WaqayKit'
+  s.dependency 'PATools'
 end

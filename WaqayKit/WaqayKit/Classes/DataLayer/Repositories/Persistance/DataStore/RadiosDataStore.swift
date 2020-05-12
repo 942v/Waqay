@@ -7,7 +7,10 @@
 
 import Foundation
 import PromiseKit
+import CoreData
 
 public protocol RadiosDataStore {
     func readUser() -> Promise<User>
+    func update(radiosData: [RadioData]) -> Promise<Bool>
+    func mainContext() -> NSManagedObjectContext
 }

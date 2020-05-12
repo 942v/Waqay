@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Frequency" representedClassName="Frequency" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="modulation" attributeType="String"/>
+        <relationship name="radio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Radio" inverseName="frequencies" inverseEntity="Radio"/>
+    </entity>
     <entity name="Radio" representedClassName="Radio" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="website" optional="YES" attributeType="URI"/>
+        <relationship name="frequencies" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Frequency" inverseName="radio" inverseEntity="Frequency"/>
+        <relationship name="socialNetworks" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SocialNetworks" inverseName="radio" inverseEntity="SocialNetworks"/>
+        <relationship name="streams" toMany="YES" deletionRule="Cascade" destinationEntity="Stream" inverseName="radio" inverseEntity="Stream"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="selectedRadios" inverseEntity="User"/>
+    </entity>
+    <entity name="SocialNetworks" representedClassName="SocialNetworks" syncable="YES" codeGenerationType="class">
+        <attribute name="facebook" optional="YES" attributeType="String"/>
+        <attribute name="instagram" optional="YES" attributeType="String"/>
+        <attribute name="telephoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="twitter" optional="YES" attributeType="String"/>
+        <attribute name="whatsapp" optional="YES" attributeType="String"/>
+        <attribute name="youtube" optional="YES" attributeType="URI"/>
+        <relationship name="radio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Radio" inverseName="socialNetworks" inverseEntity="Radio"/>
+    </entity>
+    <entity name="Stream" representedClassName="Stream" syncable="YES" codeGenerationType="class">
+        <attribute name="explanation" optional="YES" attributeType="String"/>
+        <attribute name="logo" optional="YES" attributeType="URI"/>
+        <attribute name="renewStream" optional="YES" attributeType="URI"/>
+        <attribute name="stream" optional="YES" attributeType="URI"/>
+        <attribute name="subname" optional="YES" attributeType="String"/>
+        <relationship name="radio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Radio" inverseName="streams" inverseEntity="Radio"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <relationship name="selectedRadios" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Radio" inverseName="users" inverseEntity="Radio"/>
     </entity>
     <elements>
-        <element name="Radio" positionX="-2272.4375" positionY="655.640625" width="128" height="73"/>
-        <element name="User" positionX="-2473.61328125" positionY="658.84375" width="128" height="58"/>
+        <element name="Radio" positionX="-2272.4375" positionY="655.640625" width="128" height="28"/>
+        <element name="User" positionX="-2569.37109375" positionY="412.1953125" width="128" height="58"/>
+        <element name="Stream" positionX="-2510.92578125" positionY="706.91796875" width="128" height="28"/>
+        <element name="SocialNetworks" positionX="-2285.9765625" positionY="782.328125" width="128" height="28"/>
+        <element name="Frequency" positionX="-2403" positionY="612" width="128" height="28"/>
     </elements>
 </model>

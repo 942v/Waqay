@@ -27,35 +27,43 @@ public class WaqayFakeRadiosRemoteDataAPI: RadiosDataRemoteAPI {
 private extension WaqayFakeRadiosRemoteDataAPI {
     class func makeRPPRadioData() -> [RadioData] {
         func makeFakeFrequencies() -> [RadioFrequencyData] {
-            let fm = RadioFrequencyData(modulation: "89.7")
+            let fm = RadioFrequencyData(city: "Lima",
+                                        modulation: "89.7 FM")
             return [fm]
         }
-        func makeFakeNetworks() -> [RadioNetworkData] {
-            let facebookLogo = URL(string: "https://icons.iconarchive.com/icons/danleech/simple/256/facebook-icon.png")!
-            let facebookName = "facebook"
-            let facebookWebsite = URL(string: "https://www.facebook.com/rppnoticias/")!
-            let facebook = RadioNetworkData(logo: facebookLogo,
-                                            name: facebookName,
-                                            website: facebookWebsite)
-            
-            return [facebook]
+        
+        func makeFakeNetworks() -> RadioSocialNetworksData {
+            return RadioSocialNetworksData(instagram: nil,
+                                           facebook: "rppnoticias",
+                                           youtube: nil,
+                                           twitter: nil,
+                                           whatsapp: nil,
+                                           telephoneNumber: nil)
         }
         
-        let logoURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/0/04/RPP_TV_-_2017_logo.png")!
+        func makeFakeStreams() -> [RadioStreamData] {
+            let logoURL = URL(string: "https://upload.wikimedia.org/wikipedia/commons/0/04/RPP_TV_-_2017_logo.png")!
+            let stream = URL(string: "https://google.com")!
+            
+            return [RadioStreamData(subname: nil,
+                                   description: nil,
+                                   stream: stream,
+                                   renewStream: nil,
+                                   logo: logoURL)]
+        }
         let name = "RPP Noticias"
-        
-        let frequencies = makeFakeFrequencies()
-        let knownStreamURL = URL(string: "")!
+        let streams = makeFakeStreams()
         let website = URL(string: "https://rpp.pe")!
-        
         let networks = makeFakeNetworks()
+        let frequencies = makeFakeFrequencies()
         
-        return [RadioData(logo: logoURL,
-                         name: name,
-                         frequencies: frequencies,
-                         knownStreamURL: knownStreamURL,
-                         renewStreamURL: nil,
-                         website: website,
-                         networks: networks)]
+        let radio = RadioData(id: 0,
+                              name: name,
+                              streams: streams,
+                              website: website,
+                              socialNetworks: networks,
+                              frequencies: frequencies)
+        
+        return [radio]
     }
 }
