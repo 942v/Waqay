@@ -7,6 +7,12 @@
 
 import Foundation
 
+public struct RadioResponseData {
+    let data: [RadioData]
+}
+
+extension RadioResponseData: Decodable { }
+
 public struct RadioData {
     
     let id: Int

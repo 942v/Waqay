@@ -10,7 +10,7 @@ import PromiseKit
 
 public class WaqayRadiosRemoteDataAPI {
     
-    let urlSession = URLSession()
+    let urlSession = URLSession.shared
     let domain = "https://private-e1862-waqay.apiary-mock.com/api/v1"
     
     public init() { }
@@ -28,29 +28,30 @@ extension WaqayRadiosRemoteDataAPI: RadiosDataRemoteAPI {
             
             urlSession.dataTask(with: url) { (data, response, error) in
                 if let error = error {
-                  seal.reject(error)
-                  return
+                    seal.reject(error)
+                    return
                 }
                 guard let httpResponse = response as? HTTPURLResponse else {
-                  seal.reject(RemoteAPIError.unknown)
-                  return
+                    seal.reject(RemoteAPIError.unknown)
+                    return
                 }
                 guard 200..<300 ~= httpResponse.statusCode else {
-                  seal.reject(RemoteAPIError.httpError)
-                  return
+                    seal.reject(RemoteAPIError.httpError)
+                    return
                 }
                 guard let data = data else {
-                  seal.reject(RemoteAPIError.unknown)
-                  return
+                    seal.reject(RemoteAPIError.unknown)
+                    return
                 }
                 do {
-                  let decoder = JSONDecoder()
-                  let radios = try decoder.decode([RadioData].self, from: data)
-                  seal.fulfill(radios)
+                    let decoder = JSONDecoder()
+                    let radioResponse = try decoder.decode(RadioResponseData.self, from: data)
+                    seal.fulfill(radioResponse.data)
                 } catch let error as NSError {
-                  seal.reject(error)
+                    seal.reject(error)
                 }
             }.resume()
         }
     }
 }
+

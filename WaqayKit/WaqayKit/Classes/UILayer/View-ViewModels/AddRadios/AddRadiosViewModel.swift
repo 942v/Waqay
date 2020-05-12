@@ -38,7 +38,7 @@ public class AddRadiosViewModel: NSObject {
         let fetchedResultsController = NSFetchedResultsController(
             fetchRequest: makeFetchRequest(),
             managedObjectContext: radiosDataRepository.mainContext(),
-            sectionNameKeyPath: nil,
+            sectionNameKeyPath: nil,//#keyPath(Radio.users),
             cacheName: nil)
         
         fetchedResultsController.delegate = self

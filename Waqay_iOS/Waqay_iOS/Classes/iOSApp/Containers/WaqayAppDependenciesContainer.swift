@@ -23,7 +23,8 @@ public class WaqayAppDependenciesContainer {
         }
         
         func makeRadiosDataRemoteAPI() -> RadiosDataRemoteAPI {
-            return WaqayFakeRadiosRemoteDataAPI()
+//            return WaqayFakeRadiosRemoteDataAPI()
+            return WaqayRadiosRemoteDataAPI()
         }
         
         func makeRadiosDataRepository() -> WaqayRadiosDataRepository {

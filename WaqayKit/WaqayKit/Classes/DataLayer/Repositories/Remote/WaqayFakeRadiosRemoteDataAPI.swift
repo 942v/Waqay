@@ -14,7 +14,7 @@ public class WaqayFakeRadiosRemoteDataAPI: RadiosDataRemoteAPI {
     
     public func getRadiosData() -> Promise<[RadioData]> {
         return Promise<[RadioData]> { seal in
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6) {
                 
                 let radioData = WaqayFakeRadiosRemoteDataAPI.makeRPPRadioData()
                 
