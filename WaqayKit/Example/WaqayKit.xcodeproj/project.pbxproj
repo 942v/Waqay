@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174BB3C2BD48280047390CC2 /* libPods-WaqayKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4276106652197DF29C34B9B /* libPods-WaqayKit_Tests.a */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		8624F43A44F7920EE862C211 /* Pods_WaqayKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8133FF60007946FEE60CE2D /* Pods_WaqayKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,9 +18,9 @@
 		607FACE51AFB9204008FA782 /* WaqayKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaqayKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		A4276106652197DF29C34B9B /* libPods-WaqayKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaqayKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74A0424BD7C35FD4052F85C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D2507DCF68CFCB4E79051765 /* Pods-WaqayKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaqayKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-WaqayKit_Tests/Pods-WaqayKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E8133FF60007946FEE60CE2D /* Pods_WaqayKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaqayKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8624F43A44F7920EE862C211 /* Pods_WaqayKit_Tests.framework in Frameworks */,
+				174BB3C2BD48280047390CC2 /* libPods-WaqayKit_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 		EB38831819F9AE0736CAF6D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E8133FF60007946FEE60CE2D /* Pods_WaqayKit_Tests.framework */,
+				A4276106652197DF29C34B9B /* libPods-WaqayKit_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				1D87E229A57C9C0436A6D798 /* [CP] Embed Pods Frameworks */,
+				FCA181C61B24C471D58A703D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,24 +171,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D87E229A57C9C0436A6D798 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WaqayKit_Tests/Pods-WaqayKit_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/WaqayKit/WaqayKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WaqayKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaqayKit_Tests/Pods-WaqayKit_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3B70404268412D951986BC2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +191,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCA181C61B24C471D58A703D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaqayKit_Tests/Pods-WaqayKit_Tests-resources.sh",
+				"${PODS_ROOT}/../../WaqayKit/Classes/DataLayer/Model/CoreData/WaqayData.xcdatamodeld",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WaqayData.momd",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaqayKit_Tests/Pods-WaqayKit_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

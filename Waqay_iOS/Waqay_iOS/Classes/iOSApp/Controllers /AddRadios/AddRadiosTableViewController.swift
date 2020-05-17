@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 import WaqayKit
 
 class AddRadiosTableViewController: UITableViewController {
@@ -13,6 +14,8 @@ class AddRadiosTableViewController: UITableViewController {
     @IBOutlet weak var rootView: AddRadiosRootTableView!
     
     private var viewModel: AddRadiosViewModel!
+    
+    private let disposeBag = DisposeBag()
     
     public func inject(viewModelFactory: AddRadiosViewModelFactory) {
         self.viewModel = viewModelFactory.makeAddRadiosViewModelFactory()
@@ -24,8 +27,19 @@ class AddRadiosTableViewController: UITableViewController {
         guard let navigationItem = navigationItem as? AddRadiosRootNavigationItem else {
             return
         }
+        observeViewModel()
+        
         navigationItem.inject(viewModel: viewModel)
         rootView.inject(viewModel: viewModel)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+
+    private func observeViewModel() {
+      let observable = viewModel.view.distinctUntilChanged()
+      subscribe(to: observable)
     }
 
     /*
@@ -37,4 +51,39 @@ class AddRadiosTableViewController: UITableViewController {
      // Pass the selected object to the new view controller.
      }
      */
+}
+
+extension AddRadiosTableViewController {
+    
+    func subscribe(to observable: Observable<AddRadiosView>) {
+        observable.subscribe(onNext: { [weak self] view in
+            guard let strongSelf = self else { return }
+            strongSelf.updateViewState(view)
+        }).disposed(by: disposeBag)
+    }
+    
+    func updateViewState(_ view: AddRadiosView) {
+        switch view {
+        case .loading:
+            showLoadingView()
+        case .failure(let error?):
+            showErrorView(for: error)
+        case .showingData:
+            clearBackgroundView()
+        default:
+            break
+        }
+    }
+    
+    func showLoadingView() {
+        tableView.backgroundView = AddRadiosRootLoadingView()
+    }
+    
+    func showErrorView(for error: Error?) {
+        print("error: \(error?.localizedDescription)")
+    }
+    
+    func clearBackgroundView() {
+        tableView.backgroundView = nil
+    }
 }

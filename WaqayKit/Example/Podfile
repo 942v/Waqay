@@ -1,6 +1,11 @@
+platform :ios, '11.4'
+
 use_frameworks!
+
 target 'WaqayKit_Tests' do
   pod 'WaqayKit', :path => '../'
+
+  pod 'PATools', :path => "../../PATools"
   
   
 end

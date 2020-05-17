@@ -15,6 +15,11 @@ public class AddRadiosViewModel: NSObject {
     private unowned let radiosDataRepository: RadiosDataRepository
     private unowned let didFinishAddingRadiosResponder: DidFinishAddingRadiosResponder
     
+    public var view: Observable<AddRadiosView> {
+        return viewSubject.asObservable()
+    }
+    private let viewSubject = BehaviorSubject<AddRadiosView>(value: .loading)
+    
     public var fetchedResultsControllerAction: Observable<FetchedResultsControllerAction> {
         return _fetchedResultsControllerAction.asObservable()
     }
@@ -33,7 +38,6 @@ public class AddRadiosViewModel: NSObject {
             
             return fetchRequest
         }
-        
         
         let fetchedResultsController = NSFetchedResultsController(
             fetchRequest: makeFetchRequest(),
@@ -69,7 +73,7 @@ extension AddRadiosViewModel {
         radiosDataRepository.updateRadios().catch { [weak self] error in
             guard let selfStrong = self else { return }
             print("Couldn't get data")
-            #warning("TODO: update view")
+            selfStrong.viewSubject.onNext(.failure(error: error))
         }
     }
     
@@ -136,6 +140,10 @@ extension AddRadiosViewModel: NSFetchedResultsControllerDelegate {
     }
     
     public func controllerDidChangeContent(_ controller:NSFetchedResultsController<NSFetchRequestResult>) {
+        if let fetchedObjectsCount = fetchedResultsController.fetchedObjects?.count,
+            fetchedObjectsCount > 0 {
+            viewSubject.onNext(.showingData)
+        }
         _fetchedResultsControllerAction.onNext(.didChangeContent)
     }
     
