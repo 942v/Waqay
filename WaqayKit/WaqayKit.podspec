@@ -11,9 +11,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.4'
   s.swift_versions = '5.1'
   s.source_files = 'WaqayKit/Classes/**/*.{swift}'
-  s.resources = 'WaqayKit/Classes/**/*.xcdatamodeld'
+  s.resources = ['WaqayKit/Classes/**/*.xcdatamodeld', 'WaqayKit/Configuration/**/*.plist']
   s.frameworks = 'CoreData'
   s.dependency 'RxSwift'
   s.dependency 'PromiseKit'
   s.dependency 'PATools'
+  s.dependency 'OneSignal'
 end

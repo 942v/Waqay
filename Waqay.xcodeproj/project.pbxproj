@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		05B44D29C2479AA9120593C8 /* Pods_WaqayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD109D493D36E18EFF4E772 /* Pods_WaqayTests.framework */; };
 		21855959226BD16D9C55371A /* Pods_Waqay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F11F50010CEE26478213279 /* Pods_Waqay.framework */; };
+		275F6A2B247219E200ED6058 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F6A2A247219E200ED6058 /* NotificationService.swift */; };
+		275F6A2F247219E200ED6058 /* WaqayNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 275F6A28247219E200ED6058 /* WaqayNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011AD245F7A3000E2A442 /* AppDelegate.swift */; };
 		278011BA245F7A3100E2A442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278011B9245F7A3100E2A442 /* Assets.xcassets */; };
 		278011BD245F7A3100E2A442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */; };
 		278011C8245F7A3200E2A442 /* WaqayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011C7245F7A3200E2A442 /* WaqayTests.swift */; };
+		749E2E0CF9366DFE15E5B0E7 /* Pods_Waqay_WaqayNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1506E4B03D586C8FED9A13E5 /* Pods_Waqay_WaqayNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		275F6A2D247219E200ED6058 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278011A2245F7A3000E2A442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 275F6A27247219E200ED6058;
+			remoteInfo = WaqayNotificationServiceExtension;
+		};
 		278011C4245F7A3200E2A442 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 278011A2245F7A3000E2A442 /* Project object */;
@@ -25,9 +35,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		275F6A30247219E200ED6058 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				275F6A2F247219E200ED6058 /* WaqayNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0A13D93016624BA86171A6FD /* Pods-Waqay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waqay.debug.xcconfig"; path = "Target Support Files/Pods-Waqay/Pods-Waqay.debug.xcconfig"; sourceTree = "<group>"; };
+		0E00D806EBE64B34E7E62D41 /* Pods-Waqay-WaqayNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waqay-WaqayNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		13AF21C8188D6CBDA1E9EA6F /* Pods-WaqayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaqayTests.debug.xcconfig"; path = "Target Support Files/Pods-WaqayTests/Pods-WaqayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1506E4B03D586C8FED9A13E5 /* Pods_Waqay_WaqayNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waqay_WaqayNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		275F6A28247219E200ED6058 /* WaqayNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WaqayNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		275F6A2A247219E200ED6058 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		275F6A2C247219E200ED6058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		275F6A34247219E700ED6058 /* WaqayNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WaqayNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		275F6A3B2472250900ED6058 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		275F6A3D2472278600ED6058 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		278011AA245F7A3000E2A442 /* Waqay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waqay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278011AD245F7A3000E2A442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		278011B9245F7A3100E2A442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,11 +71,20 @@
 		278011D3245F7CD200E2A442 /* Waqay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waqay.entitlements; sourceTree = "<group>"; };
 		3AD109D493D36E18EFF4E772 /* Pods_WaqayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaqayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F11F50010CEE26478213279 /* Pods_Waqay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waqay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C85BEBF501E8B760BD9D78B /* Pods-Waqay-WaqayNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waqay-WaqayNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		6B738E10DF40D83802642A12 /* Pods-Waqay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waqay.release.xcconfig"; path = "Target Support Files/Pods-Waqay/Pods-Waqay.release.xcconfig"; sourceTree = "<group>"; };
 		9C384F044CF1DD61E7551521 /* Pods-WaqayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaqayTests.release.xcconfig"; path = "Target Support Files/Pods-WaqayTests/Pods-WaqayTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		275F6A25247219E200ED6058 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749E2E0CF9366DFE15E5B0E7 /* Pods_Waqay_WaqayNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		278011A7245F7A3000E2A442 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,11 +104,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275F6A29247219E200ED6058 /* WaqayNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				275F6A34247219E700ED6058 /* WaqayNotificationServiceExtension.entitlements */,
+				275F6A2A247219E200ED6058 /* NotificationService.swift */,
+				275F6A2C247219E200ED6058 /* Info.plist */,
+			);
+			path = WaqayNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		278011A1245F7A3000E2A442 = {
 			isa = PBXGroup;
 			children = (
 				278011AC245F7A3000E2A442 /* Waqay */,
 				278011C6245F7A3200E2A442 /* WaqayTests */,
+				275F6A29247219E200ED6058 /* WaqayNotificationServiceExtension */,
 				278011AB245F7A3000E2A442 /* Products */,
 				E524C9574189F3E332C56E54 /* Pods */,
 				71E6A06306231A130EFF975B /* Frameworks */,
@@ -79,6 +131,7 @@
 			children = (
 				278011AA245F7A3000E2A442 /* Waqay.app */,
 				278011C3245F7A3200E2A442 /* WaqayTests.xctest */,
+				275F6A28247219E200ED6058 /* WaqayNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +144,8 @@
 				278011AD245F7A3000E2A442 /* AppDelegate.swift */,
 				278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */,
 				278011BE245F7A3100E2A442 /* Info.plist */,
+				275F6A3B2472250900ED6058 /* Development.xcconfig */,
+				275F6A3D2472278600ED6058 /* Production.xcconfig */,
 			);
 			path = Waqay;
 			sourceTree = "<group>";
@@ -109,6 +164,7 @@
 			children = (
 				4F11F50010CEE26478213279 /* Pods_Waqay.framework */,
 				3AD109D493D36E18EFF4E772 /* Pods_WaqayTests.framework */,
+				1506E4B03D586C8FED9A13E5 /* Pods_Waqay_WaqayNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +176,8 @@
 				6B738E10DF40D83802642A12 /* Pods-Waqay.release.xcconfig */,
 				13AF21C8188D6CBDA1E9EA6F /* Pods-WaqayTests.debug.xcconfig */,
 				9C384F044CF1DD61E7551521 /* Pods-WaqayTests.release.xcconfig */,
+				5C85BEBF501E8B760BD9D78B /* Pods-Waqay-WaqayNotificationServiceExtension.debug.xcconfig */,
+				0E00D806EBE64B34E7E62D41 /* Pods-Waqay-WaqayNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -127,6 +185,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		275F6A27247219E200ED6058 /* WaqayNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 275F6A33247219E200ED6058 /* Build configuration list for PBXNativeTarget "WaqayNotificationServiceExtension" */;
+			buildPhases = (
+				ED57BEFC2A1DAB61A06C3365 /* [CP] Check Pods Manifest.lock */,
+				275F6A24247219E200ED6058 /* Sources */,
+				275F6A25247219E200ED6058 /* Frameworks */,
+				275F6A26247219E200ED6058 /* Resources */,
+				5F323B32B249965783E8F72C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaqayNotificationServiceExtension;
+			productName = WaqayNotificationServiceExtension;
+			productReference = 275F6A28247219E200ED6058 /* WaqayNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		278011A9245F7A3000E2A442 /* Waqay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 278011CC245F7A3200E2A442 /* Build configuration list for PBXNativeTarget "Waqay" */;
@@ -136,10 +213,12 @@
 				278011A7245F7A3000E2A442 /* Frameworks */,
 				278011A8245F7A3000E2A442 /* Resources */,
 				C67DFAAA5B993BFA12CDFB06 /* [CP] Copy Pods Resources */,
+				275F6A30247219E200ED6058 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				275F6A2E247219E200ED6058 /* PBXTargetDependency */,
 			);
 			name = Waqay;
 			productName = Waqay;
@@ -175,6 +254,9 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Property Atomic Strong SAC";
 				TargetAttributes = {
+					275F6A27247219E200ED6058 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
 					278011A9245F7A3000E2A442 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -199,11 +281,19 @@
 			targets = (
 				278011A9245F7A3000E2A442 /* Waqay */,
 				278011C2245F7A3200E2A442 /* WaqayTests */,
+				275F6A27247219E200ED6058 /* WaqayNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		275F6A26247219E200ED6058 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		278011A8245F7A3000E2A442 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +313,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5F323B32B249965783E8F72C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6C688E127AB7A3093515E001 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,9 +391,39 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Waqay/Pods-Waqay-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ED57BEFC2A1DAB61A06C3365 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Waqay-WaqayNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		275F6A24247219E200ED6058 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275F6A2B247219E200ED6058 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		278011A6245F7A3000E2A442 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +443,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		275F6A2E247219E200ED6058 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 275F6A27247219E200ED6058 /* WaqayNotificationServiceExtension */;
+			targetProxy = 275F6A2D247219E200ED6058 /* PBXContainerItemProxy */;
+		};
 		278011C5245F7A3200E2A442 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 278011A9245F7A3000E2A442 /* Waqay */;
@@ -325,6 +467,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		275F6A31247219E200ED6058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C85BEBF501E8B760BD9D78B /* Pods-Waqay-WaqayNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WaqayNotificationServiceExtension/WaqayNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AU3J78BE58;
+				INFOPLIST_FILE = WaqayNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay.WaqayNotificationServiceExtension.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		275F6A32247219E200ED6058 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E00D806EBE64B34E7E62D41 /* Pods-Waqay-WaqayNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WaqayNotificationServiceExtension/WaqayNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AU3J78BE58;
+				INFOPLIST_FILE = WaqayNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay.WaqayNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		278011CA245F7A3200E2A442 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -441,8 +627,9 @@
 		};
 		278011CD245F7A3200E2A442 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A13D93016624BA86171A6FD /* Pods-Waqay.debug.xcconfig */;
+			baseConfigurationReference = 275F6A3B2472250900ED6058 /* Development.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Waqay/Waqay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,7 +641,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG RADIOS_DATASTORE_FAKE";
 				SWIFT_VERSION = 5.0;
@@ -464,8 +651,9 @@
 		};
 		278011CE245F7A3200E2A442 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B738E10DF40D83802642A12 /* Pods-Waqay.release.xcconfig */;
+			baseConfigurationReference = 275F6A3D2472278600ED6058 /* Production.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Waqay/Waqay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +721,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		275F6A33247219E200ED6058 /* Build configuration list for PBXNativeTarget "WaqayNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				275F6A31247219E200ED6058 /* Debug */,
+				275F6A32247219E200ED6058 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		278011A5245F7A3000E2A442 /* Build configuration list for PBXProject "Waqay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

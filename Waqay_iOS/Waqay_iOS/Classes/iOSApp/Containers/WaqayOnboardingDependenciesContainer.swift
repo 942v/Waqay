@@ -10,6 +10,7 @@ import WaqayKit
 public class WaqayOnboardingDependenciesContainer {
     
     private unowned let sharedRadiosDataRepository: RadiosDataRepository
+    private let sharedMainViewModel: MainViewModel
     private let sharedOnboardingViewModel: OnboardingViewModel
     
     public init(appDependencyContainer: WaqayAppDependenciesContainer) {
@@ -19,6 +20,7 @@ public class WaqayOnboardingDependenciesContainer {
         }
         
         self.sharedRadiosDataRepository = appDependencyContainer.sharedRadiosDataRepository
+        self.sharedMainViewModel = appDependencyContainer.sharedMainViewModel
         self.sharedOnboardingViewModel = makeOnboardingViewModel()
     }
 }
@@ -73,5 +75,16 @@ extension WaqayOnboardingDependenciesContainer: AddRadiosViewModelFactory {
         addRadiosTableViewController.inject(viewModelFactory: self)
         
         return addRadiosTableViewController
+    }
+}
+
+// MARk: - PushPermission
+extension WaqayOnboardingDependenciesContainer: PushPermissionViewModelFactory {
+    public func makePushPermissionViewModel() -> PushPermissionViewModel {
+        
+        let onboardingViewModel = sharedOnboardingViewModel
+        
+        return PushPermissionViewModel(pushServiceProvider: ,
+                                       goToPlayerNavigator: sharedMainViewModel)
     }
 }

@@ -15,5 +15,9 @@ target 'Waqay' do
     inherit! :search_paths
     # Pods for testing
   end
+  
+  target 'WaqayNotificationServiceExtension' do
+    pod 'OneSignal'
+  end
 
 end

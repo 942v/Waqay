@@ -64,6 +64,7 @@ public class AddRadiosRootLoadingView: NiblessView {
 
 extension AddRadiosRootLoadingView {
 
+    // MARK: Layout
     func activateConstraintsMainStackView() {
       mainStackView.translatesAutoresizingMaskIntoConstraints = false
       let centerX = mainStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor)

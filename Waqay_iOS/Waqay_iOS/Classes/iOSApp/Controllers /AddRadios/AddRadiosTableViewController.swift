@@ -66,12 +66,10 @@ extension AddRadiosTableViewController {
         switch view {
         case .loading:
             showLoadingView()
-        case .failure(let error?):
+        case .failure(let error):
             showErrorView(for: error)
         case .showingData:
             clearBackgroundView()
-        default:
-            break
         }
     }
     
@@ -79,8 +77,8 @@ extension AddRadiosTableViewController {
         tableView.backgroundView = AddRadiosRootLoadingView()
     }
     
-    func showErrorView(for error: Error?) {
-        print("error: \(error?.localizedDescription)")
+    func showErrorView(for error: ErrorMessage) {
+        tableView.backgroundView = AddRadiosRootErrorView(error: error)
     }
     
     func clearBackgroundView() {

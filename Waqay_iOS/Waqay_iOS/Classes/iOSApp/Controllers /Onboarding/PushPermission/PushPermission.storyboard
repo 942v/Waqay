@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L8P-c3-uXA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Push Permission View Controller-->
+        <scene sceneID="LYN-kz-3W1">
+            <objects>
+                <viewController id="L8P-c3-uXA" customClass="PushPermissionViewController" customModule="Waqay_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VzU-AG-emq" customClass="PushPermissionRootView" customModule="Waqay_iOS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="1V7-ZX-Fv7">
+                                <rect key="frame" x="114" y="411" width="186.5" height="74.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give us push permission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUG-k1-e7F">
+                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pj-43-BbL">
+                                        <rect key="frame" x="0.0" y="44.5" width="186.5" height="30"/>
+                                        <state key="normal" title="Give"/>
+                                        <connections>
+                                            <action selector="doAskForPermissionAction:" destination="VzU-AG-emq" eventType="touchUpInside" id="b7r-XI-slM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Az1-iI-205">
+                                <rect key="frame" x="189" y="824" width="36" height="30"/>
+                                <state key="normal" title="Later"/>
+                                <connections>
+                                    <action selector="doDismissAction:" destination="VzU-AG-emq" eventType="touchUpInside" id="e6A-fl-Imc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Az1-iI-205" firstAttribute="centerX" secondItem="VzU-AG-emq" secondAttribute="centerX" id="6tb-k0-ihh"/>
+                            <constraint firstItem="XlK-Pi-5QE" firstAttribute="bottom" secondItem="Az1-iI-205" secondAttribute="bottom" constant="8" id="7Ko-OQ-4fV"/>
+                            <constraint firstItem="1V7-ZX-Fv7" firstAttribute="centerY" secondItem="VzU-AG-emq" secondAttribute="centerY" id="YAk-Ai-EcP"/>
+                            <constraint firstItem="1V7-ZX-Fv7" firstAttribute="centerX" secondItem="VzU-AG-emq" secondAttribute="centerX" id="eZI-x0-6rE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XlK-Pi-5QE"/>
+                    </view>
+                    <connections>
+                        <outlet property="rootView" destination="VzU-AG-emq" id="gMC-GR-1GT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIM-gu-tKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="114"/>
+        </scene>
+    </scenes>
+</document>

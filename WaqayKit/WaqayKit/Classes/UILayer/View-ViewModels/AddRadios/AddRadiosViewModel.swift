@@ -72,8 +72,9 @@ extension AddRadiosViewModel {
     public func reloadData() {
         radiosDataRepository.updateRadios().catch { [weak self] error in
             guard let selfStrong = self else { return }
-            print("Couldn't get data")
-            selfStrong.viewSubject.onNext(.failure(error: error))
+            let errorMessage = ErrorMessage(title: "Refreshing data error",
+                                            message: error.localizedDescription)
+            selfStrong.viewSubject.onNext(.failure(error: errorMessage))
         }
     }
     
