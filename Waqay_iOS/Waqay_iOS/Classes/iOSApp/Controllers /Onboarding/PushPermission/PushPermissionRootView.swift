@@ -21,7 +21,7 @@ class PushPermissionRootView: UIView {
 extension PushPermissionRootView {
     
     @IBAction func doAskForPermissionAction(_ sender: Any) {
-        viewModel.showPlayer()
+        viewModel.askForPermission()
     }
     
     @IBAction func doDismissAction(_ sender: Any) {

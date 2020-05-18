@@ -21,6 +21,7 @@ public class OnboardingNavigationViewController: UINavigationController {
     
     // Factories
     private let makeAddRadiosViewController: () -> AddRadiosTableViewController
+    private let makePushPermissionViewController: () -> PushPermissionViewController
     
     // Storage
     private let disposeBag = DisposeBag()
@@ -28,10 +29,12 @@ public class OnboardingNavigationViewController: UINavigationController {
     // MARK: - Methods
     init(viewModel: OnboardingViewModel,
         welcomeViewController: WelcomeViewController,
-        makeAddRadiosViewController: @escaping () -> AddRadiosTableViewController) {
+        makeAddRadiosViewController: @escaping () -> AddRadiosTableViewController,
+        makePushPermissionViewController: @escaping () -> PushPermissionViewController) {
         self.viewModel = viewModel
         self.welcomeViewController = welcomeViewController
         self.makeAddRadiosViewController = makeAddRadiosViewController
+        self.makePushPermissionViewController = makePushPermissionViewController
         
         super.init(nibName: nil, bundle: nil)
         self.delegate = self
@@ -81,7 +84,7 @@ extension OnboardingNavigationViewController {
         case .addRadios:
             presentAddRadiosViewController()
         case .pushPermission:
-            print("Should show pushPermission")
+            presentPushNotificationViewController()
         }
     }
     
@@ -93,6 +96,12 @@ extension OnboardingNavigationViewController {
         let addRadiosTableViewControllerToPresent = makeAddRadiosViewController()
         
         pushViewController(addRadiosTableViewControllerToPresent, animated: true)
+    }
+    
+    func presentPushNotificationViewController() {
+        let pushNotificationViewController = makePushPermissionViewController()
+        
+        pushViewController(pushNotificationViewController, animated: true)
     }
 }
 
@@ -142,8 +151,8 @@ private extension OnboardingNavigationViewController {
         return .welcome
       case is AddRadiosTableViewController:
         return .addRadios
-//      case is Push:
-//        return .pushPermission
+      case is PushPermissionViewController:
+        return .pushPermission
       default:
         assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
         return nil

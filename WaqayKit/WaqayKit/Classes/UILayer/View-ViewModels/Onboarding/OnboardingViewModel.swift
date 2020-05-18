@@ -12,10 +12,17 @@ public typealias OnboardingNavigationAction = NavigationAction<OnboardingView>
 
 public class OnboardingViewModel {
     
-    public init() {}
-
+    private unowned let pushNotificationServiceProvider: PushNotificationsService
+    private unowned let goToPlayerNavigator: GoToPlayerNavigator
+    
+    public init(pushNotificationServiceProvider: PushNotificationsService,
+                goToPlayerNavigator: GoToPlayerNavigator) {
+        self.pushNotificationServiceProvider = pushNotificationServiceProvider
+        self.goToPlayerNavigator = goToPlayerNavigator
+    }
+    
     public var navigationAction: Observable<OnboardingNavigationAction> {
-      return _navigationAction.asObservable()
+        return _navigationAction.asObservable()
     }
     private let _navigationAction = BehaviorSubject<OnboardingNavigationAction>(value: .present(view: .welcome))
 }
@@ -23,7 +30,7 @@ public class OnboardingViewModel {
 // MARK: - Actions
 extension OnboardingViewModel {
     public func uiPresented(onboardingView: OnboardingView) {
-      _navigationAction.onNext(.presented(view: onboardingView))
+        _navigationAction.onNext(.presented(view: onboardingView))
     }
 }
 
@@ -37,6 +44,10 @@ extension OnboardingViewModel: GoToAddRadiosNavigator {
 // MARK: - DidFinishAddingRadiosResponder
 extension OnboardingViewModel: DidFinishAddingRadiosResponder {
     public func didFinishAddingRadios() {
-        _navigationAction.onNext(.present(view: .pushPermission))
+        if pushNotificationServiceProvider.isNotificationPermissionAuthorized() {
+            goToPlayerNavigator.navigateToPlayer()
+        }else{
+            _navigationAction.onNext(.present(view: .pushPermission))
+        }
     }
 }

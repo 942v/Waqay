@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private let waqayAppDependenciesContainer = WaqayAppDependenciesContainer()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupOneSignal()
+        setupOneSignal(with: launchOptions)
         
         let mainViewController = waqayAppDependenciesContainer.makeMainViewController()
         
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
-    func setupOneSignal() {
+    func setupOneSignal(with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         #if DEBUG
         OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
         #endif
@@ -41,7 +41,7 @@ extension AppDelegate {
         
         // Replace 'YOUR_ONESIGNAL_APP_ID' with your OneSignal App ID.
         OneSignal.initWithLaunchOptions(launchOptions,
-                                        appId: "YOUR_ONESIGNAL_APP_ID",
+                                        appId: APIKeys.osApiKey,
                                         handleNotificationAction: nil,
                                         settings: onesignalInitSettings)
         

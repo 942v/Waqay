@@ -8,6 +8,9 @@
 import Foundation
 import PromiseKit
 
-public protocol PushNotificationsService {
+public protocol PushNotificationsService: AnyObject {
+    func isNotificationPermissionAuthorized() -> Bool
+    func hasPromptedForPermission() -> Bool
     func askForPushNotificationsPermission() -> Promise<Bool>
+    func presentAppSettings()
 }

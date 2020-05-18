@@ -10,6 +10,7 @@ import WaqayKit
 public class WaqayAppDependenciesContainer {
     
     let sharedRadiosDataRepository: WaqayRadiosDataRepository
+    let sharedPushNotificationServiceProvider: PushNotificationsService
     let sharedMainViewModel: MainViewModel
     
     public init() {
@@ -36,6 +37,12 @@ public class WaqayAppDependenciesContainer {
         }
         
         self.sharedRadiosDataRepository = makeRadiosDataRepository()
+        
+        func makePushNotificationsService() -> PushNotificationsService {
+            return WaqayOneSignalPushNotificationsService()
+        }
+        
+        self.sharedPushNotificationServiceProvider = makePushNotificationsService()
         
         func makeMainViewModel() -> MainViewModel {
             return MainViewModel()

@@ -18,7 +18,7 @@ class AddRadiosTableViewController: UITableViewController {
     private let disposeBag = DisposeBag()
     
     public func inject(viewModelFactory: AddRadiosViewModelFactory) {
-        self.viewModel = viewModelFactory.makeAddRadiosViewModelFactory()
+        self.viewModel = viewModelFactory.makeAddRadiosViewModel()
     }
 
     public override func viewDidLoad() {

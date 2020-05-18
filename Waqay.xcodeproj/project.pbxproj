@@ -11,6 +11,7 @@
 		21855959226BD16D9C55371A /* Pods_Waqay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F11F50010CEE26478213279 /* Pods_Waqay.framework */; };
 		275F6A2B247219E200ED6058 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F6A2A247219E200ED6058 /* NotificationService.swift */; };
 		275F6A2F247219E200ED6058 /* WaqayNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 275F6A28247219E200ED6058 /* WaqayNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		275F6A3F24722B3500ED6058 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F6A3E24722B3500ED6058 /* Configuration.swift */; };
 		278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278011AD245F7A3000E2A442 /* AppDelegate.swift */; };
 		278011BA245F7A3100E2A442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278011B9245F7A3100E2A442 /* Assets.xcassets */; };
 		278011BD245F7A3100E2A442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */; };
@@ -60,6 +61,7 @@
 		275F6A34247219E700ED6058 /* WaqayNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WaqayNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		275F6A3B2472250900ED6058 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		275F6A3D2472278600ED6058 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		275F6A3E24722B3500ED6058 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		278011AA245F7A3000E2A442 /* Waqay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waqay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278011AD245F7A3000E2A442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		278011B9245F7A3100E2A442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				278011BE245F7A3100E2A442 /* Info.plist */,
 				275F6A3B2472250900ED6058 /* Development.xcconfig */,
 				275F6A3D2472278600ED6058 /* Production.xcconfig */,
+				275F6A3E24722B3500ED6058 /* Configuration.swift */,
 			);
 			path = Waqay;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275F6A3F24722B3500ED6058 /* Configuration.swift in Sources */,
 				278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,7 +485,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay.WaqayNotificationServiceExtension.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay.debug.WaqayNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

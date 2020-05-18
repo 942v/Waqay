@@ -10,18 +10,24 @@ import WaqayKit
 public class WaqayOnboardingDependenciesContainer {
     
     private unowned let sharedRadiosDataRepository: RadiosDataRepository
+    private unowned let sharedPushNotificationServiceProvider: PushNotificationsService
     private let sharedMainViewModel: MainViewModel
     private let sharedOnboardingViewModel: OnboardingViewModel
     
     public init(appDependencyContainer: WaqayAppDependenciesContainer) {
         
-        func makeOnboardingViewModel() -> OnboardingViewModel {
-            return OnboardingViewModel()
+        func makeOnboardingViewModel(pushNotificationServiceProvider: PushNotificationsService,
+                                     goToPlayerNavigator: GoToPlayerNavigator) -> OnboardingViewModel {
+            
+            return OnboardingViewModel(pushNotificationServiceProvider: pushNotificationServiceProvider,
+                                       goToPlayerNavigator: goToPlayerNavigator)
         }
         
         self.sharedRadiosDataRepository = appDependencyContainer.sharedRadiosDataRepository
+        self.sharedPushNotificationServiceProvider = appDependencyContainer.sharedPushNotificationServiceProvider
         self.sharedMainViewModel = appDependencyContainer.sharedMainViewModel
-        self.sharedOnboardingViewModel = makeOnboardingViewModel()
+        self.sharedOnboardingViewModel = makeOnboardingViewModel(pushNotificationServiceProvider: sharedPushNotificationServiceProvider,
+                                                                 goToPlayerNavigator: sharedMainViewModel)
     }
 }
 
@@ -35,9 +41,14 @@ extension WaqayOnboardingDependenciesContainer {
             return self.makeAddRadiosViewController()
         }
         
+        let pushPermissionViewControllerFactory = {
+            return self.makePushPermissionViewController()
+        }
+        
         return OnboardingNavigationViewController(viewModel: viewModel,
                                                   welcomeViewController: welcomeViewController,
-                                                  makeAddRadiosViewController: addRadiosViewControllerFactory)
+                                                  makeAddRadiosViewController: addRadiosViewControllerFactory,
+                                                  makePushPermissionViewController: pushPermissionViewControllerFactory)
     }
 }
 
@@ -60,7 +71,7 @@ extension WaqayOnboardingDependenciesContainer: WelcomeViewModelFactory {
 }
 
 extension WaqayOnboardingDependenciesContainer: AddRadiosViewModelFactory {
-    public func makeAddRadiosViewModelFactory() -> AddRadiosViewModel {
+    public func makeAddRadiosViewModel() -> AddRadiosViewModel {
         let radiosDataRepository = sharedRadiosDataRepository
         let onboardingViewModel = sharedOnboardingViewModel
         
@@ -81,10 +92,19 @@ extension WaqayOnboardingDependenciesContainer: AddRadiosViewModelFactory {
 // MARk: - PushPermission
 extension WaqayOnboardingDependenciesContainer: PushPermissionViewModelFactory {
     public func makePushPermissionViewModel() -> PushPermissionViewModel {
+        let pushNotificationsService = sharedPushNotificationServiceProvider
+        let mainViewModel = sharedMainViewModel
         
-        let onboardingViewModel = sharedOnboardingViewModel
+        return PushPermissionViewModel(pushNotificationServiceProvider: pushNotificationsService,
+                                       goToPlayerNavigator: mainViewModel)
+    }
+    
+    func makePushPermissionViewController() -> PushPermissionViewController {
         
-        return PushPermissionViewModel(pushServiceProvider: ,
-                                       goToPlayerNavigator: sharedMainViewModel)
+        let pushPermissionViewController = PushPermissionViewController.instantiate(from: .pushPermissionStoryboard, framework: "Waqay_iOS")
+        
+        pushPermissionViewController.inject(pushPermissionViewModelFactory: self)
+        
+        return pushPermissionViewController
     }
 }

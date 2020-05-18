@@ -9,5 +9,5 @@ import WaqayKit
 
 public protocol AddRadiosViewModelFactory {
   
-  func makeAddRadiosViewModelFactory() -> AddRadiosViewModel
+  func makeAddRadiosViewModel() -> AddRadiosViewModel
 }
