@@ -35,11 +35,20 @@ public class CoreDataStack {
         return context
     }
     
+    public func newChildContext() -> NSManagedObjectContext {
+        let childContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        childContext.parent = mainContext
+        return childContext
+    }
+    
     public func saveContext() {
         saveContext(mainContext)
     }
     
     public func saveContext(_ context: NSManagedObjectContext) {
+        guard context.hasChanges else {
+            return
+        }
         if context != mainContext {
             saveDerivedContext(context)
             return

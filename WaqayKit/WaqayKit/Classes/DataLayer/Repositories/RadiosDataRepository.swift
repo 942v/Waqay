@@ -12,7 +12,10 @@ import CoreData
 
 public protocol RadiosDataRepository: AnyObject {
     
+    func currentUser() -> Promise<User>
     func hasRadiosSelected() -> Promise<Bool>
     func updateRadios() -> Promise<Bool>
     func mainContext() -> NSManagedObjectContext
+    func newChildContext() -> NSManagedObjectContext
+    func save(_ context: NSManagedObjectContext)
 }

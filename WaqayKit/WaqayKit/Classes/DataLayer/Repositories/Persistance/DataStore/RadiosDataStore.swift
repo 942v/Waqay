@@ -13,4 +13,7 @@ public protocol RadiosDataStore {
     func readUser() -> Promise<User>
     func update(radiosData: [RadioData]) -> Promise<Bool>
     func mainContext() -> NSManagedObjectContext
+    func newChildContext() -> NSManagedObjectContext
+    func saveMainContext()
+    func save(_ context: NSManagedObjectContext)
 }

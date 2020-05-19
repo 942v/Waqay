@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Frequency" representedClassName="Frequency" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="modulation" attributeType="String"/>
         <relationship name="radio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Radio" inverseName="frequencies" inverseEntity="Radio"/>
     </entity>
-    <entity name="Radio" representedClassName="Radio" syncable="YES" codeGenerationType="class">
+    <entity name="Radio" representedClassName="Radio" syncable="YES">
         <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
+        <attribute name="section" optional="YES" transient="YES" attributeType="String"/>
         <attribute name="website" optional="YES" attributeType="URI"/>
         <relationship name="frequencies" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Frequency" inverseName="radio" inverseEntity="Frequency"/>
         <relationship name="socialNetworks" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SocialNetworks" inverseName="radio" inverseEntity="SocialNetworks"/>
@@ -35,10 +36,10 @@
         <relationship name="selectedRadios" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Radio" inverseName="users" inverseEntity="Radio"/>
     </entity>
     <elements>
-        <element name="Radio" positionX="-2272.4375" positionY="655.640625" width="128" height="28"/>
-        <element name="User" positionX="-2569.37109375" positionY="412.1953125" width="128" height="58"/>
-        <element name="Stream" positionX="-2510.92578125" positionY="706.91796875" width="128" height="28"/>
-        <element name="SocialNetworks" positionX="-2285.9765625" positionY="782.328125" width="128" height="28"/>
         <element name="Frequency" positionX="-2403" positionY="612" width="128" height="28"/>
+        <element name="Radio" positionX="-2272.4375" positionY="655.640625" width="128" height="163"/>
+        <element name="SocialNetworks" positionX="-2285.9765625" positionY="782.328125" width="128" height="28"/>
+        <element name="Stream" positionX="-2510.92578125" positionY="706.91796875" width="128" height="28"/>
+        <element name="User" positionX="-2569.37109375" positionY="412.1953125" width="128" height="58"/>
     </elements>
 </model>

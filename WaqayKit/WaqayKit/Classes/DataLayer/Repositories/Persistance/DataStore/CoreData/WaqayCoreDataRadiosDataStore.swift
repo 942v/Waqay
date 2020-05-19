@@ -34,6 +34,18 @@ extension WaqayCoreDataRadiosDataStore: RadiosDataStore {
     public func mainContext() -> NSManagedObjectContext {
         coreDataStack.mainContext
     }
+    
+    public func newChildContext() -> NSManagedObjectContext {
+        coreDataStack.newChildContext()
+    }
+    
+    public func saveMainContext() {
+        coreDataStack.saveContext()
+    }
+    
+    public func save(_ context: NSManagedObjectContext) {
+        coreDataStack.saveContext(context)
+    }
 }
 
 // MARK: - User

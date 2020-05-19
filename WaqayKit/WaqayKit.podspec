@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.resources = ['WaqayKit/Classes/**/*.xcdatamodeld', 'WaqayKit/Configuration/**/*.plist']
   s.frameworks = 'CoreData'
   s.dependency 'RxSwift'
+  s.dependency 'RxCocoa'
   s.dependency 'PromiseKit'
   s.dependency 'PATools'
   s.dependency 'OneSignal'

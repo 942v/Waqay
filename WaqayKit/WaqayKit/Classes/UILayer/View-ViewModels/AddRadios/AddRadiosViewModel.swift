@@ -24,25 +24,39 @@ public class AddRadiosViewModel: NSObject {
         return _fetchedResultsControllerAction.asObservable()
     }
     private let _fetchedResultsControllerAction = BehaviorSubject<FetchedResultsControllerAction>(value: .none)
+
+    public let doneButtonEnabled = BehaviorSubject<Bool>(value: false)
     
-    lazy var fetchedResultsController: NSFetchedResultsController<Radio> = {
-        func makeSortDescriptor() -> NSSortDescriptor {
-            NSSortDescriptor(key: #keyPath(Radio.name), ascending: true)
+    lazy var fetchedResultsController: RichFetchedResultsController<Radio> = {
+        func makeSortDescriptors() -> [NSSortDescriptor] {
+            [
+                NSSortDescriptor(key: #keyPath(Radio.section), ascending: false),
+                NSSortDescriptor(key: #keyPath(Radio.name), ascending: true)
+            ]
         }
         
-        func makeFetchRequest() -> NSFetchRequest<Radio> {
-            let fetchRequest = NSFetchRequest<Radio>(entityName: Radio.entityName)
+        func makeFetchRequest() -> RichFetchRequest<Radio> {
+            let fetchRequest = RichFetchRequest<Radio>(entityName: Radio.entityName)
             
-            let sortDescriptor = makeSortDescriptor()
-            fetchRequest.sortDescriptors = [sortDescriptor]
+            let sortDescriptors = makeSortDescriptors()
+            fetchRequest.sortDescriptors = sortDescriptors
+            
+            fetchRequest.relationshipKeyPathsForRefreshing = [
+                #keyPath(Radio.users)
+            ]
             
             return fetchRequest
         }
         
-        let fetchedResultsController = NSFetchedResultsController(
+        func objectContext() -> NSManagedObjectContext {
+            let newChildContext = radiosDataRepository.mainContext()
+            return newChildContext
+        }
+        
+        let fetchedResultsController = RichFetchedResultsController<Radio>(
             fetchRequest: makeFetchRequest(),
-            managedObjectContext: radiosDataRepository.mainContext(),
-            sectionNameKeyPath: nil,//#keyPath(Radio.users),
+            managedObjectContext: objectContext(),
+            sectionNameKeyPath: #keyPath(Radio.section),
             cacheName: nil)
         
         fetchedResultsController.delegate = self
@@ -96,12 +110,25 @@ extension AddRadiosViewModel {
     
     public func titleForHeaderIn(_ section: Int) -> String? {
         let sectionInfo = fetchedResultsController.sections?[section]
-        #warning("Complete this")
-        return "Section"
+        return sectionInfo?.name
     }
     
     public func object(at indexPath: IndexPath) -> Radio {
-        fetchedResultsController.object(at: indexPath)
+        fetchedResultsController.object(at: indexPath) as! Radio
+    }
+    
+    public func didSelectRow(at indexPath: IndexPath) {
+        
+        _ = radiosDataRepository.currentUser().done { user in
+            let radio = self.fetchedResultsController.object(at: indexPath) as! Radio
+            let context = self.fetchedResultsController.managedObjectContext
+            guard let selectedRadios = user.selectedRadios,
+                !selectedRadios.contains(radio) else {
+                    self.remove(radio, to: user, context: context)
+                    return
+            }
+            self.add(radio, to: user, context: context)
+        }
     }
 }
 
@@ -112,6 +139,18 @@ private extension AddRadiosViewModel {
         } catch let error as NSError {
             print("Fetching error: \(error), \(error.userInfo)")
         }
+    }
+    
+    private func add(_ radio: Radio, to user: User, context: NSManagedObjectContext) {
+        radio.addToUsers(user)
+        user.addToSelectedRadios(radio)
+        self.radiosDataRepository.save(context)
+    }
+    
+    private func remove(_ radio: Radio, to user: User, context: NSManagedObjectContext) {
+        radio.removeFromUsers(user)
+        user.removeFromSelectedRadios(radio)
+        self.radiosDataRepository.save(context)
     }
 }
 
@@ -145,6 +184,7 @@ extension AddRadiosViewModel: NSFetchedResultsControllerDelegate {
             fetchedObjectsCount > 0 {
             viewSubject.onNext(.showingData)
         }
+        doneButtonEnabled.onNext((fetchedResultsController.sections?.count ?? 0) > 1)
         _fetchedResultsControllerAction.onNext(.didChangeContent)
     }
     

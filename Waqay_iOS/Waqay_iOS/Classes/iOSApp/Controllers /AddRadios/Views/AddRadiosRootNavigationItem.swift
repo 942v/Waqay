@@ -6,7 +6,10 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import WaqayKit
+import PATools
 
 class AddRadiosRootNavigationItem: UINavigationItem {
     
@@ -14,9 +17,12 @@ class AddRadiosRootNavigationItem: UINavigationItem {
     
     private unowned var viewModel: AddRadiosViewModel!
     
+    private let disposeBag = DisposeBag()
+    
     public func inject(viewModel: AddRadiosViewModel) {
         self.viewModel = viewModel
         
+        bindViewModelToViews()
         setup()
     }
 
@@ -30,3 +36,20 @@ extension AddRadiosRootNavigationItem {
         viewModel.didFinishAddingRadios()
     }
 }
+
+// MARK: - Dynamic behavior
+private extension AddRadiosRootNavigationItem {
+
+  func bindViewModelToViews() {
+    bindViewModelToDoneButton()
+  }
+
+  func bindViewModelToDoneButton() {
+    viewModel
+      .doneButtonEnabled
+      .asDriver(onErrorJustReturn: true)
+      .drive(doneBarButton.rx.isEnabled)
+      .disposed(by: disposeBag)
+  }
+}
+

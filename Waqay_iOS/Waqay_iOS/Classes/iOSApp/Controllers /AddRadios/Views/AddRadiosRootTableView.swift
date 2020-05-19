@@ -38,10 +38,10 @@ extension AddRadiosRootTableView: UITableViewDataSource {
         viewModel.numberOfRowsIn(section)
     }
     
-//    func tableView(_ tableView: UITableView,
-//                   titleForHeaderInSection section: Int) -> String? {
-//        viewModel.titleForHeaderIn(section)
-//    }
+    func tableView(_ tableView: UITableView,
+                   titleForHeaderInSection section: Int) -> String? {
+        viewModel.titleForHeaderIn(section)
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.radioCellIdentifier, for: indexPath)
@@ -64,6 +64,10 @@ private extension AddRadiosRootTableView {
 
 extension AddRadiosRootTableView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 private extension AddRadiosRootTableView {

@@ -24,6 +24,10 @@ public class WaqayRadiosDataRepository {
 
 extension WaqayRadiosDataRepository: RadiosDataRepository {
     
+    public func currentUser() -> Promise<User> {
+        radiosDataStore.readUser()
+    }
+    
     public func hasRadiosSelected() -> Promise<Bool> {
         radiosDataStore.readUser().then(hasRadiosSelected(user:))
     }
@@ -34,6 +38,14 @@ extension WaqayRadiosDataRepository: RadiosDataRepository {
     
     public func mainContext() -> NSManagedObjectContext {
         radiosDataStore.mainContext()
+    }
+    
+    public func newChildContext() -> NSManagedObjectContext {
+        radiosDataStore.newChildContext()
+    }
+    
+    public func save(_ context: NSManagedObjectContext) {
+        radiosDataStore.save(context)
     }
 }
 
