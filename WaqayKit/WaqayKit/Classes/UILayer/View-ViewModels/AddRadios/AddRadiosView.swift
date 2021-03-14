@@ -11,7 +11,7 @@ public enum AddRadiosView {
     
     case loading
     case showingData
-    case failure(error: ErrorMessage)
+    case failure(error: WaqayError)
 }
 
 extension AddRadiosView: Equatable {

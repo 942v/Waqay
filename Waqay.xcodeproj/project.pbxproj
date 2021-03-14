@@ -3,12 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		05B44D29C2479AA9120593C8 /* Pods_WaqayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD109D493D36E18EFF4E772 /* Pods_WaqayTests.framework */; };
 		21855959226BD16D9C55371A /* Pods_Waqay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F11F50010CEE26478213279 /* Pods_Waqay.framework */; };
+		2734451625FDC50600FD86E5 /* UIViewController+Waqay_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444F325FDC50600FD86E5 /* UIViewController+Waqay_iOS.swift */; };
+		2734451725FDC50600FD86E5 /* AddRadioStationsListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444F525FDC50600FD86E5 /* AddRadioStationsListViewModelFactory.swift */; };
+		2734451825FDC50600FD86E5 /* PushPermissionViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444F625FDC50600FD86E5 /* PushPermissionViewModelFactory.swift */; };
+		2734451925FDC50600FD86E5 /* LaunchViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444F725FDC50600FD86E5 /* LaunchViewModelFactory.swift */; };
+		2734451A25FDC50600FD86E5 /* WelcomeViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444F825FDC50600FD86E5 /* WelcomeViewModelFactory.swift */; };
+		2734451B25FDC50600FD86E5 /* LaunchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444FB25FDC50600FD86E5 /* LaunchRootView.swift */; };
+		2734451C25FDC50600FD86E5 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273444FC25FDC50600FD86E5 /* Launch.storyboard */; };
+		2734451D25FDC50600FD86E5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444FD25FDC50600FD86E5 /* LaunchViewController.swift */; };
+		2734451E25FDC50600FD86E5 /* AddRadios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273444FF25FDC50600FD86E5 /* AddRadios.storyboard */; };
+		2734451F25FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450125FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift */; };
+		2734452025FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450225FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift */; };
+		2734452125FDC50600FD86E5 /* AddRadiosRootErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450325FDC50600FD86E5 /* AddRadiosRootErrorView.swift */; };
+		2734452225FDC50600FD86E5 /* AddRadiosRootTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450425FDC50600FD86E5 /* AddRadiosRootTableView.swift */; };
+		2734452325FDC50600FD86E5 /* AddRadiosRootLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450525FDC50600FD86E5 /* AddRadiosRootLoadingView.swift */; };
+		2734452425FDC50600FD86E5 /* AddRadiosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450625FDC50600FD86E5 /* AddRadiosTableViewController.swift */; };
+		2734452525FDC50600FD86E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450825FDC50600FD86E5 /* MainViewController.swift */; };
+		2734452625FDC50600FD86E5 /* WelcomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450B25FDC50600FD86E5 /* WelcomeRootView.swift */; };
+		2734452725FDC50600FD86E5 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2734450C25FDC50600FD86E5 /* Welcome.storyboard */; };
+		2734452825FDC50600FD86E5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450D25FDC50600FD86E5 /* WelcomeViewController.swift */; };
+		2734452925FDC50600FD86E5 /* PushPermissionRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450F25FDC50600FD86E5 /* PushPermissionRootView.swift */; };
+		2734452A25FDC50600FD86E5 /* PushPermission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2734451025FDC50600FD86E5 /* PushPermission.storyboard */; };
+		2734452B25FDC50600FD86E5 /* PushPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734451125FDC50600FD86E5 /* PushPermissionViewController.swift */; };
+		2734452C25FDC50600FD86E5 /* OnboardingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734451225FDC50600FD86E5 /* OnboardingNavigationViewController.swift */; };
+		2734452D25FDC50600FD86E5 /* WaqayOnboardingDependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734451425FDC50600FD86E5 /* WaqayOnboardingDependenciesContainer.swift */; };
+		2734452E25FDC50600FD86E5 /* WaqayAppDependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734451525FDC50600FD86E5 /* WaqayAppDependenciesContainer.swift */; };
+		2734457825FDC66B00FD86E5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734457725FDC66B00FD86E5 /* R.generated.swift */; };
+		2734458025FDC81100FD86E5 /* WaqayError+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734457F25FDC81100FD86E5 /* WaqayError+LocalizedError.swift */; };
+		2734461425FDD6CA00FD86E5 /* AddRadioStations.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2734461625FDD6CA00FD86E5 /* AddRadioStations.strings */; };
+		2734461B25FDD6EC00FD86E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734461A25FDD6EC00FD86E5 /* SceneDelegate.swift */; };
 		275F6A2B247219E200ED6058 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F6A2A247219E200ED6058 /* NotificationService.swift */; };
 		275F6A2F247219E200ED6058 /* WaqayNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 275F6A28247219E200ED6058 /* WaqayNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		275F6A3F24722B3500ED6058 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275F6A3E24722B3500ED6058 /* Configuration.swift */; };
@@ -55,6 +84,35 @@
 		0E00D806EBE64B34E7E62D41 /* Pods-Waqay-WaqayNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waqay-WaqayNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		13AF21C8188D6CBDA1E9EA6F /* Pods-WaqayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaqayTests.debug.xcconfig"; path = "Target Support Files/Pods-WaqayTests/Pods-WaqayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1506E4B03D586C8FED9A13E5 /* Pods_Waqay_WaqayNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waqay_WaqayNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		273444F325FDC50600FD86E5 /* UIViewController+Waqay_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Waqay_iOS.swift"; sourceTree = "<group>"; };
+		273444F525FDC50600FD86E5 /* AddRadioStationsListViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadioStationsListViewModelFactory.swift; sourceTree = "<group>"; };
+		273444F625FDC50600FD86E5 /* PushPermissionViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushPermissionViewModelFactory.swift; sourceTree = "<group>"; };
+		273444F725FDC50600FD86E5 /* LaunchViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewModelFactory.swift; sourceTree = "<group>"; };
+		273444F825FDC50600FD86E5 /* WelcomeViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModelFactory.swift; sourceTree = "<group>"; };
+		273444FB25FDC50600FD86E5 /* LaunchRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchRootView.swift; sourceTree = "<group>"; };
+		273444FC25FDC50600FD86E5 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		273444FD25FDC50600FD86E5 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		273444FF25FDC50600FD86E5 /* AddRadios.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddRadios.storyboard; sourceTree = "<group>"; };
+		2734450125FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootTableViewCell.swift; sourceTree = "<group>"; };
+		2734450225FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootNavigationItem.swift; sourceTree = "<group>"; };
+		2734450325FDC50600FD86E5 /* AddRadiosRootErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootErrorView.swift; sourceTree = "<group>"; };
+		2734450425FDC50600FD86E5 /* AddRadiosRootTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootTableView.swift; sourceTree = "<group>"; };
+		2734450525FDC50600FD86E5 /* AddRadiosRootLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootLoadingView.swift; sourceTree = "<group>"; };
+		2734450625FDC50600FD86E5 /* AddRadiosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosTableViewController.swift; sourceTree = "<group>"; };
+		2734450825FDC50600FD86E5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2734450B25FDC50600FD86E5 /* WelcomeRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeRootView.swift; sourceTree = "<group>"; };
+		2734450C25FDC50600FD86E5 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		2734450D25FDC50600FD86E5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2734450F25FDC50600FD86E5 /* PushPermissionRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushPermissionRootView.swift; sourceTree = "<group>"; };
+		2734451025FDC50600FD86E5 /* PushPermission.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PushPermission.storyboard; sourceTree = "<group>"; };
+		2734451125FDC50600FD86E5 /* PushPermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushPermissionViewController.swift; sourceTree = "<group>"; };
+		2734451225FDC50600FD86E5 /* OnboardingNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationViewController.swift; sourceTree = "<group>"; };
+		2734451425FDC50600FD86E5 /* WaqayOnboardingDependenciesContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaqayOnboardingDependenciesContainer.swift; sourceTree = "<group>"; };
+		2734451525FDC50600FD86E5 /* WaqayAppDependenciesContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaqayAppDependenciesContainer.swift; sourceTree = "<group>"; };
+		2734457725FDC66B00FD86E5 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		2734457F25FDC81100FD86E5 /* WaqayError+LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaqayError+LocalizedError.swift"; sourceTree = "<group>"; };
+		2734461525FDD6CA00FD86E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddRadioStations.strings; sourceTree = "<group>"; };
+		2734461A25FDD6EC00FD86E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		275F6A28247219E200ED6058 /* WaqayNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WaqayNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		275F6A2A247219E200ED6058 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		275F6A2C247219E200ED6058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +164,136 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		273444F125FDC50600FD86E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2734451325FDC50600FD86E5 /* Containers */,
+				273444F425FDC50600FD86E5 /* Factories */,
+				273444F925FDC50600FD86E5 /* Controllers  */,
+				273444F225FDC50600FD86E5 /* Tools */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		273444F225FDC50600FD86E5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				273444F325FDC50600FD86E5 /* UIViewController+Waqay_iOS.swift */,
+				2734457725FDC66B00FD86E5 /* R.generated.swift */,
+				2734457F25FDC81100FD86E5 /* WaqayError+LocalizedError.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		273444F425FDC50600FD86E5 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				273444F525FDC50600FD86E5 /* AddRadioStationsListViewModelFactory.swift */,
+				273444F625FDC50600FD86E5 /* PushPermissionViewModelFactory.swift */,
+				273444F725FDC50600FD86E5 /* LaunchViewModelFactory.swift */,
+				273444F825FDC50600FD86E5 /* WelcomeViewModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		273444F925FDC50600FD86E5 /* Controllers  */ = {
+			isa = PBXGroup;
+			children = (
+				273444FA25FDC50600FD86E5 /* Launch */,
+				273444FE25FDC50600FD86E5 /* AddRadios */,
+				2734450725FDC50600FD86E5 /* Main */,
+				2734450925FDC50600FD86E5 /* Onboarding */,
+			);
+			path = "Controllers ";
+			sourceTree = "<group>";
+		};
+		273444FA25FDC50600FD86E5 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				273444FB25FDC50600FD86E5 /* LaunchRootView.swift */,
+				273444FD25FDC50600FD86E5 /* LaunchViewController.swift */,
+				273444FC25FDC50600FD86E5 /* Launch.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		273444FE25FDC50600FD86E5 /* AddRadios */ = {
+			isa = PBXGroup;
+			children = (
+				2734450025FDC50600FD86E5 /* Views */,
+				2734450625FDC50600FD86E5 /* AddRadiosTableViewController.swift */,
+				273444FF25FDC50600FD86E5 /* AddRadios.storyboard */,
+			);
+			path = AddRadios;
+			sourceTree = "<group>";
+		};
+		2734450025FDC50600FD86E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2734450125FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift */,
+				2734450225FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift */,
+				2734450325FDC50600FD86E5 /* AddRadiosRootErrorView.swift */,
+				2734450425FDC50600FD86E5 /* AddRadiosRootTableView.swift */,
+				2734450525FDC50600FD86E5 /* AddRadiosRootLoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2734450725FDC50600FD86E5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2734450825FDC50600FD86E5 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2734450925FDC50600FD86E5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2734450A25FDC50600FD86E5 /* Welcome */,
+				2734450E25FDC50600FD86E5 /* PushPermission */,
+				2734451225FDC50600FD86E5 /* OnboardingNavigationViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2734450A25FDC50600FD86E5 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				2734450B25FDC50600FD86E5 /* WelcomeRootView.swift */,
+				2734450C25FDC50600FD86E5 /* Welcome.storyboard */,
+				2734450D25FDC50600FD86E5 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		2734450E25FDC50600FD86E5 /* PushPermission */ = {
+			isa = PBXGroup;
+			children = (
+				2734450F25FDC50600FD86E5 /* PushPermissionRootView.swift */,
+				2734451025FDC50600FD86E5 /* PushPermission.storyboard */,
+				2734451125FDC50600FD86E5 /* PushPermissionViewController.swift */,
+			);
+			path = PushPermission;
+			sourceTree = "<group>";
+		};
+		2734451325FDC50600FD86E5 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				2734451425FDC50600FD86E5 /* WaqayOnboardingDependenciesContainer.swift */,
+				2734451525FDC50600FD86E5 /* WaqayAppDependenciesContainer.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		273445FF25FDD11E00FD86E5 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				2734461625FDD6CA00FD86E5 /* AddRadioStations.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		275F6A29247219E200ED6058 /* WaqayNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +329,12 @@
 		278011AC245F7A3000E2A442 /* Waqay */ = {
 			isa = PBXGroup;
 			children = (
+				273444F125FDC50600FD86E5 /* iOS */,
+				273445FF25FDD11E00FD86E5 /* Strings */,
 				278011D3245F7CD200E2A442 /* Waqay.entitlements */,
 				278011B9245F7A3100E2A442 /* Assets.xcassets */,
 				278011AD245F7A3000E2A442 /* AppDelegate.swift */,
+				2734461A25FDD6EC00FD86E5 /* SceneDelegate.swift */,
 				278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */,
 				278011BE245F7A3100E2A442 /* Info.plist */,
 				275F6A3B2472250900ED6058 /* Development.xcconfig */,
@@ -196,7 +387,6 @@
 				275F6A24247219E200ED6058 /* Sources */,
 				275F6A25247219E200ED6058 /* Frameworks */,
 				275F6A26247219E200ED6058 /* Resources */,
-				5F323B32B249965783E8F72C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,10 +402,10 @@
 			buildConfigurationList = 278011CC245F7A3200E2A442 /* Build configuration list for PBXNativeTarget "Waqay" */;
 			buildPhases = (
 				6DFEE4B77A2DEB554CA71311 /* [CP] Check Pods Manifest.lock */,
+				2734457325FDC60500FD86E5 /* R.swift */,
 				278011A6245F7A3000E2A442 /* Sources */,
 				278011A7245F7A3000E2A442 /* Frameworks */,
 				278011A8245F7A3000E2A442 /* Resources */,
-				C67DFAAA5B993BFA12CDFB06 /* [CP] Copy Pods Resources */,
 				275F6A30247219E200ED6058 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -302,7 +492,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				278011BD245F7A3100E2A442 /* LaunchScreen.storyboard in Resources */,
+				2734461425FDD6CA00FD86E5 /* AddRadioStations.strings in Resources */,
 				278011BA245F7A3100E2A442 /* Assets.xcassets in Resources */,
+				2734451C25FDC50600FD86E5 /* Launch.storyboard in Resources */,
+				2734452725FDC50600FD86E5 /* Welcome.storyboard in Resources */,
+				2734451E25FDC50600FD86E5 /* AddRadios.storyboard in Resources */,
+				2734452A25FDC50600FD86E5 /* PushPermission.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,22 +511,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F323B32B249965783E8F72C /* [CP] Copy Pods Resources */ = {
+		2734457325FDC60500FD86E5 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				$SRCROOT/Waqay/iOS/Tools/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Waqay-WaqayNotificationServiceExtension/Pods-Waqay-WaqayNotificationServiceExtension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Waqay/iOS/Tools/R.generated.swift\"\n";
 		};
 		6C688E127AB7A3093515E001 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -377,23 +575,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C67DFAAA5B993BFA12CDFB06 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Waqay/Pods-Waqay-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Waqay/Pods-Waqay-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Waqay/Pods-Waqay-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ED57BEFC2A1DAB61A06C3365 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,8 +612,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2734451A25FDC50600FD86E5 /* WelcomeViewModelFactory.swift in Sources */,
+				2734451D25FDC50600FD86E5 /* LaunchViewController.swift in Sources */,
+				2734451825FDC50600FD86E5 /* PushPermissionViewModelFactory.swift in Sources */,
+				2734452425FDC50600FD86E5 /* AddRadiosTableViewController.swift in Sources */,
 				275F6A3F24722B3500ED6058 /* Configuration.swift in Sources */,
+				2734452825FDC50600FD86E5 /* WelcomeViewController.swift in Sources */,
+				2734452C25FDC50600FD86E5 /* OnboardingNavigationViewController.swift in Sources */,
+				2734458025FDC81100FD86E5 /* WaqayError+LocalizedError.swift in Sources */,
+				2734451725FDC50600FD86E5 /* AddRadioStationsListViewModelFactory.swift in Sources */,
+				2734451625FDC50600FD86E5 /* UIViewController+Waqay_iOS.swift in Sources */,
+				2734452B25FDC50600FD86E5 /* PushPermissionViewController.swift in Sources */,
+				2734452925FDC50600FD86E5 /* PushPermissionRootView.swift in Sources */,
+				2734457825FDC66B00FD86E5 /* R.generated.swift in Sources */,
 				278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */,
+				2734452525FDC50600FD86E5 /* MainViewController.swift in Sources */,
+				2734452125FDC50600FD86E5 /* AddRadiosRootErrorView.swift in Sources */,
+				2734452225FDC50600FD86E5 /* AddRadiosRootTableView.swift in Sources */,
+				2734452325FDC50600FD86E5 /* AddRadiosRootLoadingView.swift in Sources */,
+				2734452625FDC50600FD86E5 /* WelcomeRootView.swift in Sources */,
+				2734452D25FDC50600FD86E5 /* WaqayOnboardingDependenciesContainer.swift in Sources */,
+				2734452E25FDC50600FD86E5 /* WaqayAppDependenciesContainer.swift in Sources */,
+				2734461B25FDD6EC00FD86E5 /* SceneDelegate.swift in Sources */,
+				2734451B25FDC50600FD86E5 /* LaunchRootView.swift in Sources */,
+				2734451925FDC50600FD86E5 /* LaunchViewModelFactory.swift in Sources */,
+				2734451F25FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift in Sources */,
+				2734452025FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +665,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2734461625FDD6CA00FD86E5 /* AddRadioStations.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2734461525FDD6CA00FD86E5 /* en */,
+			);
+			name = AddRadioStations.strings;
+			sourceTree = "<group>";
+		};
 		278011BB245F7A3100E2A442 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -477,6 +690,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = WaqayNotificationServiceExtension/WaqayNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.0.1;
 				DEVELOPMENT_TEAM = AU3J78BE58;
 				INFOPLIST_FILE = WaqayNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -485,6 +699,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay.debug.WaqayNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -499,6 +714,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = WaqayNotificationServiceExtension/WaqayNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.0.1;
 				DEVELOPMENT_TEAM = AU3J78BE58;
 				INFOPLIST_FILE = WaqayNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -507,6 +723,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.proatomicdev.Waqay.WaqayNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

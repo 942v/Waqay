@@ -1,6 +1,0 @@
-use_frameworks!
-target 'Waqay_iOS_Tests' do
-  pod 'Waqay_iOS', :path => '../'
-  
-  
-end

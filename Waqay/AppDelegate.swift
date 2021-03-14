@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import CocoaLumberjack
 import OneSignal
-import Waqay_iOS
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
@@ -18,13 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private let waqayAppDependenciesContainer = WaqayAppDependenciesContainer()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        configureLogger()
         setupOneSignal(with: launchOptions)
         
-        let mainViewController = waqayAppDependenciesContainer.makeMainViewController()
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        window?.rootViewController = mainViewController
+        if #available(iOS 13, *) { } else {
+            let mainViewController = waqayAppDependenciesContainer.makeMainViewController()
+            
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.makeKeyAndVisible()
+            window?.rootViewController = mainViewController
+        }
         
         return true
     }
@@ -37,15 +40,21 @@ extension AppDelegate {
         #endif
         
         //START OneSignal initialization code
-        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]
-        
-        // Replace 'YOUR_ONESIGNAL_APP_ID' with your OneSignal App ID.
-        OneSignal.initWithLaunchOptions(launchOptions,
-                                        appId: APIKeys.osApiKey,
-                                        handleNotificationAction: nil,
-                                        settings: onesignalInitSettings)
-        
-        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+//        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]
+//        
+//        // Replace 'YOUR_ONESIGNAL_APP_ID' with your OneSignal App ID.
+//        OneSignal.initWithLaunchOptions(launchOptions,
+//                                        appId: APIKeys.osApiKey,
+//                                        handleNotificationAction: nil,
+//                                        settings: onesignalInitSettings)
+//        
+//        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
     }
 }
 
+fileprivate extension AppDelegate {
+    func configureLogger() {
+        let osLogger = DDOSLogger.sharedInstance
+        DDLog.add(osLogger)
+    }
+}

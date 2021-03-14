@@ -11,14 +11,16 @@ import PromiseKit
 
 public class LaunchViewModel {
     
-    private unowned let radiosDataRepository: RadiosDataRepository
+    private let userInformationRepository: UserInformationRepository
     private unowned let noRadiosSelectedResponder: NoRadiosSelectedResponder
     private unowned let hasRadiosSelectedResponder: HasRadiosSelectedResponder
     
-    public init(radiosDataRepository: RadiosDataRepository,
-         noRadiosSelectedResponder: NoRadiosSelectedResponder,
-         hasRadiosSelectedResponder: HasRadiosSelectedResponder) {
-        self.radiosDataRepository = radiosDataRepository
+    public init(
+        userInformationRepository: UserInformationRepository,
+        noRadiosSelectedResponder: NoRadiosSelectedResponder,
+        hasRadiosSelectedResponder: HasRadiosSelectedResponder
+    ) {
+        self.userInformationRepository = userInformationRepository
         self.noRadiosSelectedResponder = noRadiosSelectedResponder
         self.hasRadiosSelectedResponder = hasRadiosSelectedResponder
     }
@@ -26,11 +28,15 @@ public class LaunchViewModel {
 
 extension LaunchViewModel {
     public func loadData() {
-        radiosDataRepository.hasRadiosSelected().done(goToNextScreen(hasRadioSelected:)).catch { [weak self] error in
-            guard let selfStrong = self else { return }
-            print("Couldn't get data")
-            selfStrong.goToNextScreen(hasRadioSelected: false)
-        }
+        userInformationRepository
+            .getUserInformation()
+            .map { !$0.selectedRadios.isEmpty }
+            .done(goToNextScreen(hasRadioSelected:))
+            .catch { [weak self] error in
+                guard let selfStrong = self else { return }
+                print("Couldn't get data")
+                selfStrong.goToNextScreen(hasRadioSelected: false)
+            }
     }
     
     func goToNextScreen(hasRadioSelected: Bool) {
