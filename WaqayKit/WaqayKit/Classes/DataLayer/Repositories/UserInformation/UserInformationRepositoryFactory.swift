@@ -13,8 +13,8 @@ public class UserInformationRepositoryFactory {
     ) -> UserInformationRepository {
         
         func makeDataStore() -> UserInformationDataStore {
-            FakeUserInformationDataStore(hasUserInformation: false)
-//            WaqayUserInformationDataStore()
+//            FakeUserInformationDataStore(hasUserInformation: false)
+            WaqayUserInformationDataStore()
         }
         
         func makeProvider() -> UserInformationProvider {

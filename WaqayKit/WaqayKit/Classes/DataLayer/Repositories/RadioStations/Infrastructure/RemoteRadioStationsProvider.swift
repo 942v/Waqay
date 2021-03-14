@@ -15,13 +15,14 @@ extension RemoteRadioStationsProvider {
     ) -> Promise<[RadioStation]> {
         
         let baseURL = baseURLProvider
-            .baseURLComponent(appendingPath: "/radio-stations")
+            .baseURLComponent(appendingPath: "/api/v1/radio-stations")
         
         return serviceExecutor
             .requestPromise(
                 baseURL.request,
-                type: [RadioStation].self
+                type: [String:[RadioStation]].self
             )
+            .map { $0["data"]! }
     }
 }
 

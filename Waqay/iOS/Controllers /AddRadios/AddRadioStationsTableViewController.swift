@@ -9,29 +9,31 @@ import UIKit
 import RxSwift
 import WaqayKit
 
-class AddRadiosTableViewController: UITableViewController {
+class AddRadioStationsTableViewController: UITableViewController {
     
-    @IBOutlet weak var rootView: AddRadiosRootTableView!
+    // MARK: - Properties
+    @IBOutlet weak var rootView: AddRadioStationsRootTableView!
     
+    // MARK: ViewModel
     private var viewModel: AddRadioStationsListViewModelInput!
     
+    // MARK: Rx
     private let disposeBag = DisposeBag()
     
     public func inject(
         viewModelFactory: AddRadioStationsListViewModelFactory
     ) {
-        self.viewModel = viewModelFactory.makeAddRadioStationsListViewModel()
+        self.viewModel = viewModelFactory
+            .makeAddRadioStationsListViewModel()
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let navigationItem = navigationItem as? AddRadiosRootNavigationItem else {
-            return
-        }
+        setupTableView()
         observeViewModel()
         
-        navigationItem.inject(viewModel: viewModel)
+        setupNavigationItem()
         rootView.inject(viewModel: viewModel)
     }
     
@@ -57,16 +59,37 @@ class AddRadiosTableViewController: UITableViewController {
      */
 }
 
-extension AddRadiosTableViewController {
+// MARK: - Setup
+
+private extension AddRadioStationsTableViewController {
     
-    func subscribe(to observable: Observable<AddRadiosView>) {
+    func setupNavigationItem() {
+        
+        title = R.string.addRadioStations.title()
+        
+        guard let navigationItem = navigationItem as? AddRadioStationsRootNavigationItem else {
+            return
+        }
+        navigationItem.inject(viewModel: viewModel)
+    }
+    
+    func setupTableView() {
+        
+        tableView.insetsContentViewsToSafeArea = true
+        tableView.contentInsetAdjustmentBehavior = .automatic
+    }
+}
+
+extension AddRadioStationsTableViewController {
+    
+    func subscribe(to observable: Observable<AddRadioStationsView>) {
         observable.subscribe(onNext: { [weak self] view in
             guard let strongSelf = self else { return }
             strongSelf.updateViewState(view)
         }).disposed(by: disposeBag)
     }
     
-    func updateViewState(_ view: AddRadiosView) {
+    func updateViewState(_ view: AddRadioStationsView) {
         switch view {
         case .loading:
             showLoadingView()
@@ -78,11 +101,11 @@ extension AddRadiosTableViewController {
     }
     
     func showLoadingView() {
-        tableView.backgroundView = AddRadiosRootLoadingView()
+        tableView.backgroundView = AddRadioStationsRootLoadingView()
     }
     
     func showErrorView(for error: WaqayError) {
-        tableView.backgroundView = AddRadiosRootErrorView(error: error)
+        tableView.backgroundView = AddRadioStationsRootErrorView(error: error)
     }
     
     func clearBackgroundView() {

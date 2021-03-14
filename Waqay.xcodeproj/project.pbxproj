@@ -17,13 +17,13 @@
 		2734451B25FDC50600FD86E5 /* LaunchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444FB25FDC50600FD86E5 /* LaunchRootView.swift */; };
 		2734451C25FDC50600FD86E5 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273444FC25FDC50600FD86E5 /* Launch.storyboard */; };
 		2734451D25FDC50600FD86E5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273444FD25FDC50600FD86E5 /* LaunchViewController.swift */; };
-		2734451E25FDC50600FD86E5 /* AddRadios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273444FF25FDC50600FD86E5 /* AddRadios.storyboard */; };
-		2734451F25FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450125FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift */; };
-		2734452025FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450225FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift */; };
-		2734452125FDC50600FD86E5 /* AddRadiosRootErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450325FDC50600FD86E5 /* AddRadiosRootErrorView.swift */; };
-		2734452225FDC50600FD86E5 /* AddRadiosRootTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450425FDC50600FD86E5 /* AddRadiosRootTableView.swift */; };
-		2734452325FDC50600FD86E5 /* AddRadiosRootLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450525FDC50600FD86E5 /* AddRadiosRootLoadingView.swift */; };
-		2734452425FDC50600FD86E5 /* AddRadiosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450625FDC50600FD86E5 /* AddRadiosTableViewController.swift */; };
+		2734451E25FDC50600FD86E5 /* AddRadioStations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273444FF25FDC50600FD86E5 /* AddRadioStations.storyboard */; };
+		2734451F25FDC50600FD86E5 /* AddRadioStationsRootTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450125FDC50600FD86E5 /* AddRadioStationsRootTableViewCell.swift */; };
+		2734452025FDC50600FD86E5 /* AddRadioStationsRootNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450225FDC50600FD86E5 /* AddRadioStationsRootNavigationItem.swift */; };
+		2734452125FDC50600FD86E5 /* AddRadioStationsRootErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450325FDC50600FD86E5 /* AddRadioStationsRootErrorView.swift */; };
+		2734452225FDC50600FD86E5 /* AddRadioStationsRootTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450425FDC50600FD86E5 /* AddRadioStationsRootTableView.swift */; };
+		2734452325FDC50600FD86E5 /* AddRadioStationsRootLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450525FDC50600FD86E5 /* AddRadioStationsRootLoadingView.swift */; };
+		2734452425FDC50600FD86E5 /* AddRadioStationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450625FDC50600FD86E5 /* AddRadioStationsTableViewController.swift */; };
 		2734452525FDC50600FD86E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450825FDC50600FD86E5 /* MainViewController.swift */; };
 		2734452625FDC50600FD86E5 /* WelcomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2734450B25FDC50600FD86E5 /* WelcomeRootView.swift */; };
 		2734452725FDC50600FD86E5 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2734450C25FDC50600FD86E5 /* Welcome.storyboard */; };
@@ -92,13 +92,13 @@
 		273444FB25FDC50600FD86E5 /* LaunchRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchRootView.swift; sourceTree = "<group>"; };
 		273444FC25FDC50600FD86E5 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		273444FD25FDC50600FD86E5 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		273444FF25FDC50600FD86E5 /* AddRadios.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddRadios.storyboard; sourceTree = "<group>"; };
-		2734450125FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootTableViewCell.swift; sourceTree = "<group>"; };
-		2734450225FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootNavigationItem.swift; sourceTree = "<group>"; };
-		2734450325FDC50600FD86E5 /* AddRadiosRootErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootErrorView.swift; sourceTree = "<group>"; };
-		2734450425FDC50600FD86E5 /* AddRadiosRootTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootTableView.swift; sourceTree = "<group>"; };
-		2734450525FDC50600FD86E5 /* AddRadiosRootLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosRootLoadingView.swift; sourceTree = "<group>"; };
-		2734450625FDC50600FD86E5 /* AddRadiosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadiosTableViewController.swift; sourceTree = "<group>"; };
+		273444FF25FDC50600FD86E5 /* AddRadioStations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddRadioStations.storyboard; sourceTree = "<group>"; };
+		2734450125FDC50600FD86E5 /* AddRadioStationsRootTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadioStationsRootTableViewCell.swift; sourceTree = "<group>"; };
+		2734450225FDC50600FD86E5 /* AddRadioStationsRootNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadioStationsRootNavigationItem.swift; sourceTree = "<group>"; };
+		2734450325FDC50600FD86E5 /* AddRadioStationsRootErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadioStationsRootErrorView.swift; sourceTree = "<group>"; };
+		2734450425FDC50600FD86E5 /* AddRadioStationsRootTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadioStationsRootTableView.swift; sourceTree = "<group>"; };
+		2734450525FDC50600FD86E5 /* AddRadioStationsRootLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadioStationsRootLoadingView.swift; sourceTree = "<group>"; };
+		2734450625FDC50600FD86E5 /* AddRadioStationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRadioStationsTableViewController.swift; sourceTree = "<group>"; };
 		2734450825FDC50600FD86E5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2734450B25FDC50600FD86E5 /* WelcomeRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeRootView.swift; sourceTree = "<group>"; };
 		2734450C25FDC50600FD86E5 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
@@ -221,8 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				2734450025FDC50600FD86E5 /* Views */,
-				2734450625FDC50600FD86E5 /* AddRadiosTableViewController.swift */,
-				273444FF25FDC50600FD86E5 /* AddRadios.storyboard */,
+				2734450625FDC50600FD86E5 /* AddRadioStationsTableViewController.swift */,
+				273444FF25FDC50600FD86E5 /* AddRadioStations.storyboard */,
 			);
 			path = AddRadios;
 			sourceTree = "<group>";
@@ -230,11 +230,11 @@
 		2734450025FDC50600FD86E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2734450125FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift */,
-				2734450225FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift */,
-				2734450325FDC50600FD86E5 /* AddRadiosRootErrorView.swift */,
-				2734450425FDC50600FD86E5 /* AddRadiosRootTableView.swift */,
-				2734450525FDC50600FD86E5 /* AddRadiosRootLoadingView.swift */,
+				2734450125FDC50600FD86E5 /* AddRadioStationsRootTableViewCell.swift */,
+				2734450225FDC50600FD86E5 /* AddRadioStationsRootNavigationItem.swift */,
+				2734450325FDC50600FD86E5 /* AddRadioStationsRootErrorView.swift */,
+				2734450425FDC50600FD86E5 /* AddRadioStationsRootTableView.swift */,
+				2734450525FDC50600FD86E5 /* AddRadioStationsRootLoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -496,7 +496,7 @@
 				278011BA245F7A3100E2A442 /* Assets.xcassets in Resources */,
 				2734451C25FDC50600FD86E5 /* Launch.storyboard in Resources */,
 				2734452725FDC50600FD86E5 /* Welcome.storyboard in Resources */,
-				2734451E25FDC50600FD86E5 /* AddRadios.storyboard in Resources */,
+				2734451E25FDC50600FD86E5 /* AddRadioStations.storyboard in Resources */,
 				2734452A25FDC50600FD86E5 /* PushPermission.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,7 +615,7 @@
 				2734451A25FDC50600FD86E5 /* WelcomeViewModelFactory.swift in Sources */,
 				2734451D25FDC50600FD86E5 /* LaunchViewController.swift in Sources */,
 				2734451825FDC50600FD86E5 /* PushPermissionViewModelFactory.swift in Sources */,
-				2734452425FDC50600FD86E5 /* AddRadiosTableViewController.swift in Sources */,
+				2734452425FDC50600FD86E5 /* AddRadioStationsTableViewController.swift in Sources */,
 				275F6A3F24722B3500ED6058 /* Configuration.swift in Sources */,
 				2734452825FDC50600FD86E5 /* WelcomeViewController.swift in Sources */,
 				2734452C25FDC50600FD86E5 /* OnboardingNavigationViewController.swift in Sources */,
@@ -627,17 +627,17 @@
 				2734457825FDC66B00FD86E5 /* R.generated.swift in Sources */,
 				278011AE245F7A3000E2A442 /* AppDelegate.swift in Sources */,
 				2734452525FDC50600FD86E5 /* MainViewController.swift in Sources */,
-				2734452125FDC50600FD86E5 /* AddRadiosRootErrorView.swift in Sources */,
-				2734452225FDC50600FD86E5 /* AddRadiosRootTableView.swift in Sources */,
-				2734452325FDC50600FD86E5 /* AddRadiosRootLoadingView.swift in Sources */,
+				2734452125FDC50600FD86E5 /* AddRadioStationsRootErrorView.swift in Sources */,
+				2734452225FDC50600FD86E5 /* AddRadioStationsRootTableView.swift in Sources */,
+				2734452325FDC50600FD86E5 /* AddRadioStationsRootLoadingView.swift in Sources */,
 				2734452625FDC50600FD86E5 /* WelcomeRootView.swift in Sources */,
 				2734452D25FDC50600FD86E5 /* WaqayOnboardingDependenciesContainer.swift in Sources */,
 				2734452E25FDC50600FD86E5 /* WaqayAppDependenciesContainer.swift in Sources */,
 				2734461B25FDD6EC00FD86E5 /* SceneDelegate.swift in Sources */,
 				2734451B25FDC50600FD86E5 /* LaunchRootView.swift in Sources */,
 				2734451925FDC50600FD86E5 /* LaunchViewModelFactory.swift in Sources */,
-				2734451F25FDC50600FD86E5 /* AddRadiosRootTableViewCell.swift in Sources */,
-				2734452025FDC50600FD86E5 /* AddRadiosRootNavigationItem.swift in Sources */,
+				2734451F25FDC50600FD86E5 /* AddRadioStationsRootTableViewCell.swift in Sources */,
+				2734452025FDC50600FD86E5 /* AddRadioStationsRootNavigationItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

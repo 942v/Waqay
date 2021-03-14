@@ -14,7 +14,7 @@ fileprivate enum CellIdentifier: String {
     case cell = "RadioCell"
 }
 
-class AddRadiosRootTableView: UITableView {
+class AddRadioStationsRootTableView: UITableView {
     
     // MARK: - Properties
     
@@ -43,7 +43,7 @@ class AddRadiosRootTableView: UITableView {
 // MARK: - Bindings
 
 // MARK: Dynamic behavior
-private extension AddRadiosRootTableView {
+private extension AddRadioStationsRootTableView {
     
     func observeViewModel() {
         
@@ -62,7 +62,7 @@ private extension AddRadiosRootTableView {
 
 // MARK - UITableViewDataSource
 
-extension AddRadiosRootTableView: UITableViewDataSource {
+extension AddRadioStationsRootTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         do {
@@ -94,7 +94,7 @@ extension AddRadiosRootTableView: UITableViewDataSource {
 
 // MARK - UITableViewDelegate
 
-extension AddRadiosRootTableView: UITableViewDelegate {
+extension AddRadioStationsRootTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         do {
@@ -104,19 +104,25 @@ extension AddRadiosRootTableView: UITableViewDelegate {
         } catch {
             fatalError("Error reading value from list data subject.")
         }
+        let cell = tableView.cellForRow(at: indexPath)
+        if cell?.accessoryType == .checkmark {
+            cell?.accessoryType = .none
+        }else{
+            cell?.accessoryType = .checkmark
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 // MARK: - Helpers
 
-private extension AddRadiosRootTableView {
+private extension AddRadioStationsRootTableView {
     func configure(
         cell: UITableViewCell,
         with radioStation: RadioStation
     ) {
         
-        guard let cell = cell as? AddRadiosRootTableViewCell else {
+        guard let cell = cell as? AddRadioStationsRootTableViewCell else {
             return
         }
         

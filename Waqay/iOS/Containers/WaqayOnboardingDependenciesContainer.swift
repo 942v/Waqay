@@ -105,10 +105,10 @@ extension WaqayOnboardingDependenciesContainer: AddRadioStationsListViewModelFac
         )
     }
     
-    func makeAddRadiosViewController() -> AddRadiosTableViewController {
+    func makeAddRadiosViewController() -> AddRadioStationsTableViewController {
         
-        let addRadiosTableViewController = AddRadiosTableViewController.instantiate(
-            from: .addRadiosStoryboard
+        let addRadiosTableViewController = AddRadioStationsTableViewController.instantiate(
+            from: .addRadioStationsStoryboard
         )
         
         addRadiosTableViewController.inject(

@@ -91,8 +91,8 @@ struct R: Rswift.Validatable {
   #if os(iOS) || os(tvOS)
   /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
-    /// Storyboard `AddRadios`.
-    static let addRadios = _R.storyboard.addRadios()
+    /// Storyboard `AddRadioStations`.
+    static let addRadioStations = _R.storyboard.addRadioStations()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Launch`.
@@ -103,9 +103,9 @@ struct R: Rswift.Validatable {
     static let welcome = _R.storyboard.welcome()
 
     #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "AddRadios", bundle: ...)`
-    static func addRadios(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.addRadios)
+    /// `UIStoryboard(name: "AddRadioStations", bundle: ...)`
+    static func addRadioStations(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.addRadioStations)
     }
     #endif
 
@@ -187,19 +187,38 @@ struct R: Rswift.Validatable {
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `RadioCell`.
-    static let radioCell: Rswift.ReuseIdentifier<AddRadiosRootTableViewCell> = Rswift.ReuseIdentifier(identifier: "RadioCell")
+    static let radioCell: Rswift.ReuseIdentifier<AddRadioStationsRootTableViewCell> = Rswift.ReuseIdentifier(identifier: "RadioCell")
 
     fileprivate init() {}
   }
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.addRadioStations` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.addRadioStations` struct is generated, and contains static references to 2 localization keys.
     struct addRadioStations {
+      /// en translation: Loading radio stations...
+      ///
+      /// Locales: en
+      static let loading = Rswift.StringResource(key: "loading", tableName: "AddRadioStations", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Radio stations
       ///
       /// Locales: en
       static let title = Rswift.StringResource(key: "title", tableName: "AddRadioStations", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: Loading radio stations...
+      ///
+      /// Locales: en
+      static func loading(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("loading", tableName: "AddRadioStations", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "AddRadioStations", preferredLanguages: preferredLanguages) else {
+          return "loading"
+        }
+
+        return NSLocalizedString("loading", tableName: "AddRadioStations", bundle: bundle, comment: "")
+      }
 
       /// en translation: Radio stations
       ///
@@ -246,7 +265,7 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
-      try addRadios.validate()
+      try addRadioStations.validate()
       #endif
       #if os(iOS) || os(tvOS)
       try launch.validate()
@@ -263,11 +282,11 @@ struct _R: Rswift.Validatable {
     }
 
     #if os(iOS) || os(tvOS)
-    struct addRadios: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = AddRadiosTableViewController
+    struct addRadioStations: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = AddRadioStationsTableViewController
 
       let bundle = R.hostingBundle
-      let name = "AddRadios"
+      let name = "AddRadioStations"
 
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {

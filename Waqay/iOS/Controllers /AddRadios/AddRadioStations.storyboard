@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Radios Table View Controller-->
+        <!--Add Radio Stations Table View Controller-->
         <scene sceneID="gRe-Ni-1Ko">
             <objects>
-                <tableViewController id="JL6-tt-wOi" customClass="AddRadiosTableViewController" customModule="Waqay" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zyK-Vv-T1c" customClass="AddRadiosRootTableView" customModule="Waqay" customModuleProvider="target">
+                <tableViewController id="JL6-tt-wOi" customClass="AddRadioStationsTableViewController" customModule="Waqay" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zyK-Vv-T1c" customClass="AddRadioStationsRootTableView" customModule="Waqay" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -22,7 +22,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RadioCell" textLabel="9i0-lS-mIA" rowHeight="108" style="IBUITableViewCellStyleDefault" id="I2L-N7-O10" customClass="AddRadiosRootTableViewCell" customModule="Waqay" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RadioCell" textLabel="9i0-lS-mIA" rowHeight="108" style="IBUITableViewCellStyleDefault" id="I2L-N7-O10" customClass="AddRadioStationsRootTableViewCell" customModule="Waqay" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I2L-N7-O10" id="f69-NU-qkS">
@@ -45,7 +45,7 @@
                             <outlet property="delegate" destination="JL6-tt-wOi" id="Sm3-63-cGn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="MnE-t8-Yvp" customClass="AddRadiosRootNavigationItem" customModule="Waqay" customModuleProvider="target">
+                    <navigationItem key="navigationItem" id="MnE-t8-Yvp" customClass="AddRadioStationsRootNavigationItem" customModule="Waqay" customModuleProvider="target">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="GLX-Dn-fHZ">
                             <connections>
                                 <action selector="doDoneAction:" destination="MnE-t8-Yvp" id="NY1-L0-rXo"/>

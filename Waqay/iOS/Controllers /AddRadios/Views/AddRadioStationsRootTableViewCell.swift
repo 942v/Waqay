@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class AddRadiosRootTableViewCell: UITableViewCell {
+public class AddRadioStationsRootTableViewCell: UITableViewCell {
 
     override public func awakeFromNib() {
         super.awakeFromNib()

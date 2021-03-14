@@ -10,7 +10,7 @@ import UIKit
 public enum Storyboard: String {
     case launchStoryboard = "Launch"
     case welcomeStoryboard = "Welcome"
-    case addRadiosStoryboard = "AddRadios"
+    case addRadioStationsStoryboard = "AddRadioStations"
     case pushPermissionStoryboard = "PushPermission"
 }
 

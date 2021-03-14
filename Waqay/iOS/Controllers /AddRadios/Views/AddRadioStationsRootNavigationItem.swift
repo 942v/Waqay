@@ -9,7 +9,7 @@ import UIKit
 import WaqayKit
 import RxSwift
 
-class AddRadiosRootNavigationItem: UINavigationItem {
+class AddRadioStationsRootNavigationItem: UINavigationItem {
     
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
@@ -23,22 +23,17 @@ class AddRadiosRootNavigationItem: UINavigationItem {
         self.viewModel = viewModel
         
         bindViewModelToViews()
-        setup()
-    }
-
-    private func setup() {
-        title = R.string.addRadioStations.title()
     }
 }
 
-extension AddRadiosRootNavigationItem {
+extension AddRadioStationsRootNavigationItem {
     @IBAction func doDoneAction(_ sender: Any) {
         viewModel.didFinishAddingRadios()
     }
 }
 
 // MARK: - Dynamic behavior
-private extension AddRadiosRootNavigationItem {
+private extension AddRadioStationsRootNavigationItem {
 
   func bindViewModelToViews() {
     bindViewModelToDoneButton()

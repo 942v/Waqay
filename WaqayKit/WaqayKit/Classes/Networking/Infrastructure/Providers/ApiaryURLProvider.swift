@@ -16,7 +16,7 @@ public class ApiaryURLProvider: BaseURLProvider {
     ) -> URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
-        urlComponents.host = "private-e1862-waqay.apiary-mock.com/api/v1"
+        urlComponents.host = "private-e1862-waqay.apiary-mock.com"
         if let path = path {
             urlComponents.path = path
         }

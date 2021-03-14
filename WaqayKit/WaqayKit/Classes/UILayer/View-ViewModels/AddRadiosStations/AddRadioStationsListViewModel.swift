@@ -16,10 +16,10 @@ public class AddRadioStationsListViewModel: AddRadioStationsListViewModelInput {
     private let didFinishAddingRadiosResponder: DidFinishAddingRadiosResponder
     
     // MARK: Rx
-    public var view: Observable<AddRadiosView> {
+    public var view: Observable<AddRadioStationsView> {
         return viewSubject.asObservable()
     }
-    private let viewSubject = BehaviorSubject<AddRadiosView>(value: .loading)
+    private let viewSubject = BehaviorSubject<AddRadioStationsView>(value: .loading)
     public var errorMessages: Observable<WaqayError> {
         return errorMessagesSubject.asObservable()
     }
@@ -88,7 +88,9 @@ extension AddRadioStationsListViewModel {
         if radioStations.count>0 {
             viewSubject.onNext(.showingData)
         }else{
-            fatalError("TODO: Add support for showing view with no radios")
+            if try! viewSubject.value() != .loading {
+                fatalError("TODO: Add support for showing view with no radios")
+            }
         }
     }
 }

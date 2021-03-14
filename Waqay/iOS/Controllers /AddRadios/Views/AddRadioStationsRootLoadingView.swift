@@ -8,7 +8,7 @@
 import UIKit
 import PATools
 
-public class AddRadiosRootLoadingView: NiblessView {
+public class AddRadioStationsRootLoadingView: NiblessView {
     
     private var hierarchyNotReady = true
     
@@ -25,7 +25,7 @@ public class AddRadiosRootLoadingView: NiblessView {
     
     let centerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Loading radios.."
+        label.text = R.string.addRadioStations.loading()
         label.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         return label
     }()
@@ -62,7 +62,7 @@ public class AddRadiosRootLoadingView: NiblessView {
     }
 }
 
-extension AddRadiosRootLoadingView {
+extension AddRadioStationsRootLoadingView {
     
     // MARK: Layout
     func activateConstraintsMainStackView() {

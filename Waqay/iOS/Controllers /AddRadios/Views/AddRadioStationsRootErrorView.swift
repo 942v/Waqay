@@ -9,7 +9,7 @@ import UIKit
 import PATools
 import WaqayKit
 
-public class AddRadiosRootErrorView: NiblessView {
+public class AddRadioStationsRootErrorView: NiblessView {
     private var hierarchyNotReady = true
     
     private let error: Error
@@ -67,7 +67,7 @@ public class AddRadiosRootErrorView: NiblessView {
 }
 
 // MARK: Layout
-extension AddRadiosRootErrorView {
+extension AddRadioStationsRootErrorView {
     
     func activateConstraintsMainStackView() {
         mainStackView.translatesAutoresizingMaskIntoConstraints = false

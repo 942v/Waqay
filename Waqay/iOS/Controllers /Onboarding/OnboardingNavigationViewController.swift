@@ -20,7 +20,7 @@ public class OnboardingNavigationViewController: UINavigationController {
     private let welcomeViewController: WelcomeViewController
     
     // Factories
-    private let makeAddRadiosViewController: () -> AddRadiosTableViewController
+    private let makeAddRadiosViewController: () -> AddRadioStationsTableViewController
     private let makePushPermissionViewController: () -> PushPermissionViewController
     
     // Storage
@@ -29,7 +29,7 @@ public class OnboardingNavigationViewController: UINavigationController {
     // MARK: - Methods
     init(viewModel: OnboardingViewModel,
         welcomeViewController: WelcomeViewController,
-        makeAddRadiosViewController: @escaping () -> AddRadiosTableViewController,
+        makeAddRadiosViewController: @escaping () -> AddRadioStationsTableViewController,
         makePushPermissionViewController: @escaping () -> PushPermissionViewController) {
         self.viewModel = viewModel
         self.welcomeViewController = welcomeViewController
@@ -47,6 +47,7 @@ public class OnboardingNavigationViewController: UINavigationController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationBar.prefersLargeTitles = true
         observeViewModel()
     }
 }
@@ -149,7 +150,7 @@ private extension OnboardingNavigationViewController {
       switch viewController {
       case is WelcomeViewController:
         return .welcome
-      case is AddRadiosTableViewController:
+      case is AddRadioStationsTableViewController:
         return .addRadios
       case is PushPermissionViewController:
         return .pushPermission
