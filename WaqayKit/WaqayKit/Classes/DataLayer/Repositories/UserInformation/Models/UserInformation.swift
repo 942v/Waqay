@@ -9,13 +9,13 @@ import Foundation
 
 public struct UserInformation {
     public let identifier: String
-    public let selectedRadios: [RadioStation]
+    public let selectedRadioStations: [RadioStation]
 }
 
 extension UserInformation: Codable {
     enum CodingKeys: String, CodingKey {
         case identifier
-        case selectedRadios
+        case selectedRadioStations
     }
 }
 

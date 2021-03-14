@@ -14,4 +14,7 @@ protocol UserInformationDataStore {
     func save(
         _ userInformation: UserInformation
     ) -> Promise<UserInformation>
+    func delete(
+        userInformation: UserInformation
+    ) -> Promise<UserInformation>
 }

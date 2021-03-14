@@ -30,7 +30,7 @@ extension LaunchViewModel {
     public func loadData() {
         userInformationRepository
             .getUserInformation()
-            .map { !$0.selectedRadios.isEmpty }
+            .map { !$0.selectedRadioStations.isEmpty }
             .done(goToNextScreen(hasRadioSelected:))
             .catch { [weak self] error in
                 guard let selfStrong = self else { return }

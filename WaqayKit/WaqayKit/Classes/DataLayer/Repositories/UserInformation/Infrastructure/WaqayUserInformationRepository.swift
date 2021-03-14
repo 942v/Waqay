@@ -32,6 +32,27 @@ extension WaqayUserInformationRepository {
             .then(fetchFromNetworkIfNeeded)
     }
     
+    func updateUserInformation(
+        selectedRadios: [RadioStation]
+    ) -> Promise<UserInformation> {
+        
+        dataStore
+            .getUserInformation()
+            .then { userInformation -> Promise<UserInformation> in
+                guard
+                    let userInformation = userInformation
+                else {
+                    fatalError("We need a user information object to continue")
+                }
+                let newUserInformation = UserInformation(
+                    identifier: userInformation.identifier,
+                    selectedRadioStations: selectedRadios
+                )
+                return .value(newUserInformation)
+            }
+            .then(dataStore.save(_:))
+    }
+    
     func fetchFromNetworkIfNeeded(
         userInformationFromDataStore: UserInformation?
     ) -> Promise<UserInformation> {

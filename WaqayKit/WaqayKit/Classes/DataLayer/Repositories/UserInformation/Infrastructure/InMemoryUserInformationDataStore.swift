@@ -1,5 +1,5 @@
 //
-//  WaqayUserInformationDataStore.swift
+//  InMemoryUserInformationDataStore.swift
 //  WaqayKit
 //
 //  Created by Guillermo Sáenz on 3/13/21.
@@ -7,7 +7,7 @@
 
 import PromiseKit
 
-class WaqayUserInformationDataStore: UserInformationDataStore {
+class InMemoryUserInformationDataStore: UserInformationDataStore {
     
     // MARK: - Properties
     public var userInformation: UserInformation?
@@ -17,7 +17,7 @@ class WaqayUserInformationDataStore: UserInformationDataStore {
     init() { }
 }
 
-extension WaqayUserInformationDataStore {
+extension InMemoryUserInformationDataStore {
     func getUserInformation(
     ) -> Promise<UserInformation?> {
         return Promise { seal in
@@ -34,6 +34,17 @@ extension WaqayUserInformationDataStore {
         return Promise { seal in
             self.accessQueue.async {
                 self.userInformation = userInformation
+                seal.fulfill(userInformation)
+            }
+        }
+    }
+    
+    func delete(
+        userInformation: UserInformation
+    ) -> Promise<UserInformation> {
+        return Promise { seal in
+            self.accessQueue.async {
+                self.userInformation = nil
                 seal.fulfill(userInformation)
             }
         }

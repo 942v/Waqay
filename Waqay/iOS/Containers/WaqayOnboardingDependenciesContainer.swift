@@ -12,7 +12,7 @@ public class WaqayOnboardingDependenciesContainer {
     // MARK: - Properties
     
     // From parent container
-    
+    private let sharedUserInformationRepository: UserInformationRepository
     private let sharedRadioStationsRepository: RadioStationsRepository
     private unowned let sharedPushNotificationServiceProvider: PushNotificationsService
     private let sharedMainViewModel: MainViewModel
@@ -36,6 +36,7 @@ public class WaqayOnboardingDependenciesContainer {
             )
         }
         
+        self.sharedUserInformationRepository = appDependencyContainer.sharedUserInformationRepository
         self.sharedRadioStationsRepository = appDependencyContainer.sharedRadioStationsRepository
         self.sharedPushNotificationServiceProvider = appDependencyContainer.sharedPushNotificationServiceProvider
         self.sharedMainViewModel = appDependencyContainer.sharedMainViewModel
@@ -97,10 +98,12 @@ extension WaqayOnboardingDependenciesContainer: WelcomeViewModelFactory {
 extension WaqayOnboardingDependenciesContainer: AddRadioStationsListViewModelFactory {
     public func makeAddRadioStationsListViewModel() -> AddRadioStationsListViewModelInput {
         let radioStationsRepository = sharedRadioStationsRepository
+        let userInformationRepository = sharedUserInformationRepository
         let onboardingViewModel = sharedOnboardingViewModel
         
         return AddRadioStationsListViewModel(
             radioStationsRepository: radioStationsRepository,
+            userInformationRepository: userInformationRepository,
             didFinishAddingRadiosResponder: onboardingViewModel
         )
     }

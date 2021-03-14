@@ -18,4 +18,5 @@ Pod::Spec.new do |s|
   s.dependency 'PromiseKit'
   s.dependency 'PATools'
   s.dependency 'OneSignal'
+  s.dependency 'KeychainAccess'
 end

@@ -11,11 +11,11 @@ import RxSwift
 public protocol AddRadioStationsListViewModelInput {
     var view: Observable<AddRadioStationsView> { get }
     var errorMessages: Observable<WaqayError> { get }
-    var radioStations: BehaviorSubject<[RadioStation]> { get }
+    var radioStationsData: BehaviorSubject<[AddRadioStationsData]> { get }
     var doneButtonEnabled: BehaviorSubject<Bool> { get }
     
     func loadRadioStations()
-    func didSelect(_ radioStation: RadioStation)
+    func didSelect(_ radioStationData: AddRadioStationsData)
     
     func didFinishAddingRadios()
 }

@@ -8,7 +8,11 @@
 import PromiseKit
 
 public protocol UserInformationRepository {
-   
-   func getUserInformation(
-   ) -> Promise<UserInformation>
+    
+    func getUserInformation(
+    ) -> Promise<UserInformation>
+    
+    func updateUserInformation(
+        selectedRadios: [RadioStation]
+    ) -> Promise<UserInformation>
 }

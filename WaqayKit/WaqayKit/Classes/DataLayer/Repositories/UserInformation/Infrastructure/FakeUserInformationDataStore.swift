@@ -38,6 +38,12 @@ extension FakeUserInformationDataStore {
     ) -> Promise<UserInformation> {
         .value(userInformation)
     }
+    
+    func delete(
+        userInformation: UserInformation
+    ) -> Promise<UserInformation> {
+        .value(userInformation)
+    }
 }
 
 fileprivate extension FakeUserInformationDataStore {
@@ -58,7 +64,7 @@ fileprivate extension FakeUserInformationDataStore {
         
         let userInformation = UserInformation(
             identifier: identifier,
-            selectedRadios: selectedRadios
+            selectedRadioStations: selectedRadios
         )
         
         return .value(userInformation)

@@ -17,7 +17,7 @@ extension LocalUserInformationProvider {
         
         let userInformation = UserInformation(
             identifier: UUID().uuidString,
-            selectedRadios: []
+            selectedRadioStations: []
         )
         
         return .value(userInformation)

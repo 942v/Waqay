@@ -22,7 +22,7 @@ class AddRadioStationsRootTableView: UITableView {
     private var viewModel: AddRadioStationsListViewModelInput!
     
     // MARK: Rx
-    private var radioStations = BehaviorSubject<[RadioStation]>(value: [])
+    private var radioStationsData = BehaviorSubject<[AddRadioStationsData]>(value: [])
     
     private let disposeBag = DisposeBag()
     
@@ -48,12 +48,12 @@ private extension AddRadioStationsRootTableView {
     func observeViewModel() {
         
         viewModel
-            .radioStations
+            .radioStationsData
             .asDriver(onErrorRecover: { _ in fatalError("Encountered unexpected view model radio stations observable error.") })
-            .drive(radioStations)
+            .drive(radioStationsData)
             .disposed(by: disposeBag)
         
-        radioStations
+        radioStationsData
             .asDriver(onErrorRecover: { _ in fatalError("Encountered unexpected radio stations observable error.") })
             .drive(onNext: { [weak self] _ in self?.reloadData() })
             .disposed(by: disposeBag)
@@ -66,7 +66,7 @@ extension AddRadioStationsRootTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         do {
-            return try radioStations.value().count
+            return try radioStationsData.value().count
         } catch {
             fatalError("Error reading value from list data subject.")
         }
@@ -74,7 +74,7 @@ extension AddRadioStationsRootTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         do {
-            let radioStation = try radioStations.value()[indexPath.row]
+            let radioStation = try radioStationsData.value()[indexPath.row]
             
             let cell = tableView.dequeueReusableCell(
                 withIdentifier: CellIdentifier.cell.rawValue
@@ -98,17 +98,11 @@ extension AddRadioStationsRootTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         do {
-            let radioStation = try radioStations.value()[indexPath.row]
+            let radioStationData = try radioStationsData.value()[indexPath.row]
             viewModel
-                .didSelect(radioStation)
+                .didSelect(radioStationData)
         } catch {
             fatalError("Error reading value from list data subject.")
-        }
-        let cell = tableView.cellForRow(at: indexPath)
-        if cell?.accessoryType == .checkmark {
-            cell?.accessoryType = .none
-        }else{
-            cell?.accessoryType = .checkmark
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -119,13 +113,14 @@ extension AddRadioStationsRootTableView: UITableViewDelegate {
 private extension AddRadioStationsRootTableView {
     func configure(
         cell: UITableViewCell,
-        with radioStation: RadioStation
+        with radioStationsData: AddRadioStationsData
     ) {
         
         guard let cell = cell as? AddRadioStationsRootTableViewCell else {
             return
         }
         
-        cell.textLabel?.text = radioStation.name
+        cell.accessoryType = radioStationsData.isSelected ? .checkmark : .none
+        cell.textLabel?.text = radioStationsData.radioStation.name
     }
 }

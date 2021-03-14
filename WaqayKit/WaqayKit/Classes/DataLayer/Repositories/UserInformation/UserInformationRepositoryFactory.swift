@@ -14,7 +14,13 @@ public class UserInformationRepositoryFactory {
         
         func makeDataStore() -> UserInformationDataStore {
 //            FakeUserInformationDataStore(hasUserInformation: false)
-            WaqayUserInformationDataStore()
+            InMemoryUserInformationDataStore() 
+            
+//            let userInformationCoder = UserInformationPropertyListCoder()
+//
+//            return KeychainUserInformationDataStore(
+//                userInformationCoder: userInformationCoder
+//            )
         }
         
         func makeProvider() -> UserInformationProvider {
